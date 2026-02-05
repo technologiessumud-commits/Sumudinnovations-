@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Us | Sumud Innovations</title>
+
+<style>
+:root{--p:#6a0dad;--d:#1f1f1f;--g:#f4f4f4}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#fff;color:#000;line-height:1.7}
+
+/* shared layout */
+header{position:fixed;top:0;width:100%;background:#fff;border-bottom:1px solid #eee;z-index:1000}
+.nav{max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:bold;color:var(--p)}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{text-decoration:none;color:#000}
+.hamburger{display:none;flex-direction:column;gap:5px}
+.hamburger span{width:25px;height:3px;background:#000}
+.mobile-menu{position:fixed;top:0;right:-100%;width:260px;height:100%;background:#fff;padding:80px 30px;transition:.3s}
+.mobile-menu.active{right:0}
+.mobile-menu a{display:block;margin-bottom:20px}
+
+.hero{
+  margin-top:90px;
+  padding:100px 20px;
+  background:linear-gradient(rgba(0,0,0,.7),rgba(0,0,0,.7)),
+  url("https://images.unsplash.com/photo-1529333166437-7750a6dd5a70") center/cover;
+  color:#fff;text-align:center
+}
+
+.section{padding:100px 20px}
+.container{max-width:1200px;margin:auto}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.split img{width:100%;border-radius:12px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:30px}
+.card{background:var(--g);padding:30px;border-radius:12px}
+
+footer{background:#111;color:#fff;padding:60px 20px}
+
+@media(max-width:900px){
+  nav ul{display:none}
+  .hamburger{display:flex}
+  .split{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Sumud Innovations</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="services.html">Services</a>
+  <a href="process.html">Process</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="hero">
+  <h1>About Sumud Innovations</h1>
+  <p>Built on resilience, quality, and long-term thinking.</p>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <h2>Our Story</h2>
+      <p>Sumud Innovations was founded to solve a common problem — unreliable software delivery.</p>
+      <p>We focus on clarity, clean code, and sustainable systems.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1556761175-129418cb2dfe">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container grid">
+    <div class="card">
+      <h3>Resilience</h3>
+      <p>Software that survives growth and change.</p>
+    </div>
+    <div class="card">
+      <h3>Transparency</h3>
+      <p>Clear communication and honest timelines.</p>
+    </div>
+    <div class="card">
+      <h3>Partnership</h3>
+      <p>We grow with our clients.</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <p>© Sumud Innovations</p>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
