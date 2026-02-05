@@ -1,92 +1,289 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sumud Innovations | Software Development Company</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sumud Innovations – Software Built to Last</title>
 
-<style>
-:root{--p:#6a0dad;--d:#1f1f1f;--l:#fff;--g:#f4f4f4}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#fff;color:#000;line-height:1.7}
+  <style>
+    :root {
+      --purple: #5a2ea6;
+      --purple-dark: #4a2591;
+      --white: #ffffff;
+      --gray: #f4f5f8;
+      --dark: #1a1a1a;
+    }
 
-/* HEADER */
-header{position:fixed;top:0;width:100%;background:#fff;border-bottom:1px solid #eee;z-index:1000}
-.nav{max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:bold;color:var(--p)}
-nav ul{display:flex;gap:25px;list-style:none}
-nav a{text-decoration:none;color:#000}
-nav a:hover{color:var(--p)}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
-.hamburger span{width:25px;height:3px;background:#000}
-.mobile-menu{position:fixed;top:0;right:-100%;width:260px;height:100%;background:#fff;padding:80px 30px;transition:.3s}
-.mobile-menu.active{right:0}
-.mobile-menu a{display:block;margin-bottom:20px;color:#000;font-size:18px;text-decoration:none}
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-/* HERO */
-.hero{
-  margin-top:90px;
-  padding:120px 20px;
-  background:linear-gradient(rgba(106,13,173,.9),rgba(106,13,173,.9)),
-  url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4") center/cover;
-  color:#fff;text-align:center
-}
-.hero h1{font-size:46px;margin-bottom:15px}
-.hero p{max-width:750px;margin:auto;font-size:18px}
-.hero a{
-  display:inline-block;margin-top:25px;
-  background:#fff;color:var(--p);
-  padding:14px 30px;border-radius:6px;
-  text-decoration:none;font-weight:bold
-}
+    body {
+      background: var(--gray);
+      color: var(--dark);
+      line-height: 1.7;
+    }
 
-/* SECTIONS */
-.section{padding:100px 20px}
-.container{max-width:1200px;margin:auto}
+    /* NAV */
+    header {
+      background: white;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
 
-/* GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
-.card{background:var(--g);padding:30px;border-radius:12px}
-.card img{width:100%;border-radius:10px;margin-bottom:15px}
-.card h3{color:var(--p);margin-bottom:10px}
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-/* IMAGE SPLIT */
-.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
-.split img{width:100%;border-radius:12px}
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--purple);
+    }
 
-/* CTA */
-.cta{background:var(--p);color:#fff;text-align:center;padding:100px 20px}
-.cta h2{font-size:38px;margin-bottom:15px}
-.cta a{background:#fff;color:var(--p);padding:14px 30px;text-decoration:none;border-radius:6px;font-weight:bold}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
 
-/* FOOTER */
-footer{background:#111;color:#fff;padding:60px 20px}
-.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
-footer a{color:#ccc;text-decoration:none;display:block;margin-bottom:10px}
+    .nav-links a {
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+    }
 
-@media(max-width:900px){
-  nav ul{display:none}
-  .hamburger{display:flex}
-  .split{grid-template-columns:1fr}
-}
-</style>
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 75%;
+      height: 100%;
+      background: var(--purple);
+      padding: 60px 30px;
+      transition: 0.3s;
+      z-index: 2000;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      font-size: 20px;
+      margin-bottom: 25px;
+      text-decoration: none;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    /* HERO */
+    .hero {
+      background:
+        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+        url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+      background-size: cover;
+      background-position: center;
+      color: white;
+      padding: 130px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 48px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: 20px auto 40px;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    .hero a {
+      background: var(--purple);
+      color: white;
+      padding: 15px 35px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    /* COUNTERS */
+    .stats {
+      background: white;
+      padding: 80px 20px;
+    }
+
+    .stats-grid {
+      max-width: 1100px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      text-align: center;
+    }
+
+    .stat h2 {
+      font-size: 42px;
+      color: var(--purple);
+    }
+
+    .stat p {
+      font-weight: bold;
+      color: #555;
+    }
+
+    /* IMAGE SECTIONS */
+    .section {
+      padding: 100px 20px;
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .section img {
+      width: 100%;
+      border-radius: 18px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    }
+
+    .section h2 {
+      color: var(--purple);
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    /* TESTIMONIALS */
+    .testimonials {
+      background: var(--purple);
+      color: white;
+      padding: 100px 20px;
+    }
+
+    .testimonial-grid {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .testimonial {
+      background: white;
+      color: var(--dark);
+      padding: 30px;
+      border-radius: 16px;
+      text-align: center;
+    }
+
+    .testimonial img {
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 15px;
+    }
+
+    .testimonial strong {
+      display: block;
+      margin-top: 10px;
+      color: var(--purple);
+    }
+
+    /* CTA */
+    .cta {
+      background: linear-gradient(135deg, var(--purple), #7c4dff);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+
+    .cta h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+
+    .cta a {
+      background: white;
+      color: var(--purple);
+      padding: 15px 40px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 50px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .section {
+        grid-template-columns: 1fr;
+      }
+      .nav-links {
+        display: none;
+      }
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
   <div class="nav">
     <div class="logo">Sumud Innovations</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
@@ -99,74 +296,129 @@ footer a{color:#ccc;text-decoration:none;display:block;margin-bottom:10px}
 </div>
 
 <section class="hero">
-  <h1>Building Resilient Software for Long-Term Success</h1>
-  <p>Sumud Innovations partners with startups and businesses to build scalable, secure, and future-ready digital products.</p>
+  <h1>Building Resilient Software for African & Global Businesses</h1>
+  <p>
+    We design, develop, and scale high-performance digital products
+    that help businesses grow sustainably.
+  </p>
   <a href="contact.html">Start a Project</a>
 </section>
 
-<section class="section">
-  <div class="container grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
-      <h3>Engineering Excellence</h3>
-      <p>Clean architecture, maintainable code, and scalable systems.</p>
+<section class="stats">
+  <div class="stats-grid">
+    <div class="stat">
+      <h2 class="counter" data-target="120">0</h2>
+      <p>Projects Delivered</p>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
-      <h3>Startup-Focused</h3>
-      <p>Flexible engagement models designed for growth.</p>
+    <div class="stat">
+      <h2 class="counter" data-target="45">0</h2>
+      <p>Happy Clients</p>
     </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
-      <h3>Transparent Process</h3>
-      <p>Clear communication from idea to launch.</p>
+    <div class="stat">
+      <h2 class="counter" data-target="6">0</h2>
+      <p>Countries Served</p>
+    </div>
+    <div class="stat">
+      <h2 class="counter" data-target="99">0</h2>
+      <p>% Client Satisfaction</p>
     </div>
   </div>
 </section>
 
 <section class="section">
-  <div class="container split">
-    <div>
-      <h2>Why Sumud Innovations?</h2>
-      <p>We don’t just ship software — we build long-term products.</p>
-      <p>Our focus on resilience, scalability, and quality sets us apart.</p>
+  <div>
+    <h2>We Build With Purpose</h2>
+    <p>
+      From startups to established enterprises, we create digital solutions
+      that are secure, scalable, and designed for real-world impact.
+    </p>
+  </div>
+  <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="">
+</section>
+
+<section class="section">
+  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="">
+  <div>
+    <h2>Technology That Grows With You</h2>
+    <p>
+      Our systems are built to evolve as your business expands, ensuring
+      long-term reliability and performance.
+    </p>
+  </div>
+</section>
+
+<section class="testimonials">
+  <h2 style="text-align:center;margin-bottom:50px;">What Our Clients Say</h2>
+  <div class="testimonial-grid">
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/32.jpg">
+      <p>“Sumud Innovations transformed our idea into a real product.”</p>
+      <strong>Kwame Mensah – Ghana</strong>
     </div>
-    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/women/45.jpg">
+      <p>“Professional, reliable, and very easy to work with.”</p>
+      <strong>Amina Bello – Nigeria</strong>
+    </div>
+    <div class="testimonial">
+      <img src="https://randomuser.me/api/portraits/men/64.jpg">
+      <p>“Our platform scaled smoothly with zero downtime.”</p>
+      <strong>Thabo Mokoena – South Africa</strong>
+    </div>
   </div>
 </section>
 
 <section class="cta">
-  <h2>Let’s Build Something That Lasts</h2>
+  <h2>Let’s Build Something Powerful</h2>
+  <p>Your vision deserves world-class execution.</p>
   <a href="contact.html">Contact Us</a>
 </section>
 
 <footer>
-  <div class="footer-grid">
+  <div class="footer-content">
     <div>
-      <h4>Sumud Innovations</h4>
-      <p>Resilient software. Real partnerships.</p>
+      <strong>Sumud Innovations</strong>
+      <p>Software built to last.</p>
     </div>
     <div>
-      <h4>Pages</h4>
+      <strong>Pages</strong>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="process.html">Process</a>
       <a href="contact.html">Contact</a>
     </div>
     <div>
-      <h4>Social</h4>
+      <strong>Social</strong>
       <a href="#">LinkedIn</a>
-      <a href="#">Twitter</a>
-      <a href="#">Facebook</a>
+      <a href="#">Twitter / X</a>
+      <a href="#">GitHub</a>
     </div>
   </div>
 </footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
+  function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("active");
+  }
+
+  const counters = document.querySelectorAll('.counter');
+  counters.forEach(counter => {
+    const update = () => {
+      const target = +counter.dataset.target;
+      const current = +counter.innerText;
+      const increment = target / 100;
+
+      if (current < target) {
+        counter.innerText = Math.ceil(current + increment);
+        setTimeout(update, 30);
+      } else {
+        counter.innerText = target;
+      }
+    };
+    update();
+  });
 </script>
 
 </body>
-        </html>
+  </html>
