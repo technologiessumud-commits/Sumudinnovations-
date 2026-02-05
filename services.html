@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Services | Sumud Innovations</title>
+
+<style>
+:root {
+  --primary:#6a0dad;
+  --dark:#1f1f1f;
+  --light:#ffffff;
+  --gray:#f4f4f4;
+}
+
+* {margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
+body {background:var(--light);color:var(--dark);line-height:1.7}
+
+/* HEADER */
+header {position:fixed;top:0;width:100%;background:#fff;border-bottom:1px solid #eee;z-index:1000}
+.nav {max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo {font-size:22px;font-weight:bold;color:var(--primary)}
+nav ul {display:flex;gap:25px;list-style:none}
+nav a {text-decoration:none;color:var(--dark);font-weight:500}
+nav a:hover {color:var(--primary)}
+.hamburger {display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span {width:25px;height:3px;background:#000}
+
+/* MOBILE MENU */
+.mobile-menu {
+  position:fixed;top:0;right:-100%;
+  width:260px;height:100%;
+  background:#fff;padding:80px 30px;
+  transition:.3s;box-shadow:-4px 0 10px rgba(0,0,0,.1)
+}
+.mobile-menu a {display:block;margin-bottom:20px;font-size:18px;color:#000;text-decoration:none}
+.mobile-menu.active {right:0}
+
+/* HERO */
+.hero {
+  margin-top:90px;
+  padding:100px 20px;
+  background:linear-gradient(rgba(106,13,173,.85),rgba(106,13,173,.85)),
+  url("https://images.unsplash.com/photo-1522071820081-009f0129c71c") center/cover;
+  color:white;text-align:center
+}
+.hero h1 {font-size:44px;margin-bottom:15px}
+.hero p {max-width:750px;margin:auto;font-size:18px}
+
+/* SECTIONS */
+.section {padding:90px 20px}
+.container {max-width:1200px;margin:auto}
+
+/* SERVICE BLOCK */
+.service {
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  margin-bottom:100px;
+  align-items:center
+}
+.service img {width:100%;border-radius:12px}
+.service h2 {color:var(--primary);margin-bottom:15px}
+.service p {margin-bottom:15px}
+
+/* CTA */
+.cta {
+  background:var(--primary);
+  color:white;
+  text-align:center;
+  padding:90px 20px
+}
+.cta h2 {font-size:36px;margin-bottom:15px}
+.cta a {
+  display:inline-block;
+  margin-top:20px;
+  padding:14px 30px;
+  background:white;
+  color:var(--primary);
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:6px
+}
+
+/* FOOTER */
+footer {background:#111;color:white;padding:60px 20px}
+.footer-grid {
+  max-width:1200px;margin:auto;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:30px
+}
+footer h4 {margin-bottom:15px}
+footer a {color:#ccc;text-decoration:none;display:block;margin-bottom:10px}
+footer a:hover {color:#fff}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  nav ul {display:none}
+  .hamburger {display:flex}
+  .service {grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Sumud Innovations</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="process.html">Process</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="hero">
+  <h1>Our Services</h1>
+  <p>End-to-end software development services designed for scalability, reliability, and long-term success.</p>
+</section>
+
+<section class="section">
+  <div class="container">
+
+    <div class="service">
+      <div>
+        <h2>Web Application Development</h2>
+        <p>We build modern, secure, and scalable web applications using proven architectures.</p>
+        <p>From MVPs to enterprise platforms, our solutions are designed to grow with your business.</p>
+        <p>Technologies include modern frontend frameworks, robust backend systems, and cloud-ready deployments.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
+    </div>
+
+    <div class="service">
+      <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="">
+      <div>
+        <h2>Mobile Application Development</h2>
+        <p>Native and cross-platform mobile apps built for performance and usability.</p>
+        <p>We handle everything from design to deployment on Android and iOS.</p>
+        <p>Our focus is smooth user experience, offline reliability, and long-term maintainability.</p>
+      </div>
+    </div>
+
+    <div class="service">
+      <div>
+        <h2>Custom Software Solutions</h2>
+        <p>Tailored internal tools, dashboards, automation systems, and integrations.</p>
+        <p>We solve unique operational challenges with clean, well-documented code.</p>
+        <p>Perfect for businesses that need systems built exactly for their workflows.</p>
+      </div>
+      <img src="https://images.unsplash.com/photo-1600267165603-7e1b69e88a71" alt="">
+    </div>
+
+    <div class="service">
+      <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698" alt="">
+      <div>
+        <h2>UI / UX Design</h2>
+        <p>User-centered design that improves engagement and usability.</p>
+        <p>We design interfaces that feel intuitive, modern, and aligned with your brand.</p>
+        <p>From wireframes to polished visuals.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Ready to Build?</h2>
+  <p>Let’s turn your idea into a scalable product.</p>
+  <a href="contact.html">Start a Project</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Sumud Innovations</h4>
+      <p>Building resilient software for long-term success.</p>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+    </div>
+    <div>
+      <h4>Connect</h4>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+</html>
