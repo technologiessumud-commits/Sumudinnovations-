@@ -3,14 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sumud Innovations – Software Built to Last</title>
+  <title>Sumud Innovations | Building Resilient Software</title>
 
   <style>
     :root {
       --purple: #5a2ea6;
       --purple-dark: #4a2591;
-      --white: #ffffff;
-      --gray: #f4f5f8;
+      --gray: #f5f6fa;
       --dark: #1a1a1a;
     }
 
@@ -29,7 +28,7 @@
 
     /* NAV */
     header {
-      background: white;
+      background: #fff;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -95,8 +94,8 @@
     /* HERO */
     .hero {
       background:
-        linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-        url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
+        linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+        url("https://images.unsplash.com/photo-1590650213165-c1fef80648c4");
       background-size: cover;
       background-position: center;
       color: white;
@@ -114,7 +113,6 @@
       max-width: 800px;
       margin: 20px auto 40px;
       font-size: 18px;
-      opacity: 0.95;
     }
 
     .hero a {
@@ -126,32 +124,7 @@
       font-weight: bold;
     }
 
-    /* COUNTERS */
-    .stats {
-      background: white;
-      padding: 80px 20px;
-    }
-
-    .stats-grid {
-      max-width: 1100px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-      text-align: center;
-    }
-
-    .stat h2 {
-      font-size: 42px;
-      color: var(--purple);
-    }
-
-    .stat p {
-      font-weight: bold;
-      color: #555;
-    }
-
-    /* IMAGE SECTIONS */
+    /* SECTIONS */
     .section {
       padding: 100px 20px;
       max-width: 1200px;
@@ -233,25 +206,46 @@
       font-weight: bold;
     }
 
+    /* FOOTER */
     footer {
       background: #111;
       color: #ccc;
-      padding: 50px 20px;
+      padding: 60px 20px;
     }
 
     .footer-content {
       max-width: 1200px;
       margin: auto;
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 30px;
     }
 
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 8px;
+    .social-icons {
+      display: flex;
+      gap: 15px;
+      margin-top: 10px;
+    }
+
+    .social-icons a {
+      width: 42px;
+      height: 42px;
+      background: #222;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      background: var(--purple);
+    }
+
+    .social-icons svg {
+      width: 20px;
+      height: 20px;
+      fill: white;
     }
 
     footer strong {
@@ -297,80 +291,55 @@
 
 <section class="hero">
   <h1>Building Resilient Software for African & Global Businesses</h1>
-  <p>
-    We design, develop, and scale high-performance digital products
-    that help businesses grow sustainably.
-  </p>
+  <p>We design and build scalable digital products that grow with your business.</p>
   <a href="contact.html">Start a Project</a>
 </section>
 
-<section class="stats">
-  <div class="stats-grid">
-    <div class="stat">
-      <h2 class="counter" data-target="120">0</h2>
-      <p>Projects Delivered</p>
-    </div>
-    <div class="stat">
-      <h2 class="counter" data-target="45">0</h2>
-      <p>Happy Clients</p>
-    </div>
-    <div class="stat">
-      <h2 class="counter" data-target="6">0</h2>
-      <p>Countries Served</p>
-    </div>
-    <div class="stat">
-      <h2 class="counter" data-target="99">0</h2>
-      <p>% Client Satisfaction</p>
-    </div>
-  </div>
-</section>
-
 <section class="section">
   <div>
-    <h2>We Build With Purpose</h2>
+    <h2>Purpose-Driven Engineering</h2>
     <p>
-      From startups to established enterprises, we create digital solutions
-      that are secure, scalable, and designed for real-world impact.
+      We focus on clean architecture, scalability, and long-term reliability
+      to ensure your software remains valuable for years.
     </p>
   </div>
-  <img src="https://images.unsplash.com/photo-1531973576160-7125cd663d86" alt="">
+  <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
 </section>
 
 <section class="section">
-  <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c" alt="">
+  <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c">
   <div>
-    <h2>Technology That Grows With You</h2>
+    <h2>Built for Growth</h2>
     <p>
-      Our systems are built to evolve as your business expands, ensuring
-      long-term reliability and performance.
+      Our systems evolve with your business, adapting to scale, performance,
+      and security demands.
     </p>
   </div>
 </section>
 
 <section class="testimonials">
-  <h2 style="text-align:center;margin-bottom:50px;">What Our Clients Say</h2>
+  <h2 style="text-align:center;margin-bottom:50px;">Trusted by Clients</h2>
   <div class="testimonial-grid">
     <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/men/32.jpg">
-      <p>“Sumud Innovations transformed our idea into a real product.”</p>
+      <img src="https://randomuser.me/api/portraits/men/12.jpg">
+      <p>“Reliable, professional, and highly skilled.”</p>
       <strong>Kwame Mensah – Ghana</strong>
     </div>
     <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/women/45.jpg">
-      <p>“Professional, reliable, and very easy to work with.”</p>
+      <img src="https://randomuser.me/api/portraits/women/55.jpg">
+      <p>“They truly understand startup needs.”</p>
       <strong>Amina Bello – Nigeria</strong>
     </div>
     <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/men/64.jpg">
-      <p>“Our platform scaled smoothly with zero downtime.”</p>
+      <img src="https://randomuser.me/api/portraits/men/48.jpg">
+      <p>“Our platform is now stable and scalable.”</p>
       <strong>Thabo Mokoena – South Africa</strong>
     </div>
   </div>
 </section>
 
 <section class="cta">
-  <h2>Let’s Build Something Powerful</h2>
-  <p>Your vision deserves world-class execution.</p>
+  <h2>Let’s Build Something Meaningful</h2>
   <a href="contact.html">Contact Us</a>
 </section>
 
@@ -378,21 +347,42 @@
   <div class="footer-content">
     <div>
       <strong>Sumud Innovations</strong>
-      <p>Software built to last.</p>
+      <p>Resilient software for long-term success.</p>
     </div>
+
     <div>
-      <strong>Pages</strong>
+      <strong>Quick Links</strong>
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="process.html">Process</a>
       <a href="contact.html">Contact</a>
     </div>
+
     <div>
-      <strong>Social</strong>
-      <a href="#">LinkedIn</a>
-      <a href="#">Twitter / X</a>
-      <a href="#">GitHub</a>
+      <strong>Connect</strong>
+      <div class="social-icons">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/profile.php?id=61583195955596" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12z"/>
+          </svg>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/2349047009387" target="_blank">
+          <svg viewBox="0 0 24 24">
+            <path d="M20.5 3.5A11 11 0 0 0 3.3 17.7L2 22l4.4-1.2A11 11 0 1 0 20.5 3.5zM12 20a9 9 0 0 1-4.6-1.2l-.3-.2-2.7.7.7-2.6-.2-.3A9 9 0 1 1 12 20zm5-6.5c-.3-.2-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-1 .9-.4.1-.7-.1a7.5 7.5 0 0 1-2.2-1.4 8.4 8.4 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6s-.7-1.7-.9-2.3c-.2-.6-.4-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.2 1.4 3.4a14.6 14.6 0 0 0 5.6 5.6c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.3.2-.6.2-1.2.1-1.3-.1-.1-.3-.2-.6-.4z"/>
+          </svg>
+        </a>
+
+        <!-- Email -->
+        <a href="mailto:technologiessumud@gmail.com">
+          <svg viewBox="0 0 24 24">
+            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
+          </svg>
+        </a>
+      </div>
     </div>
   </div>
 </footer>
@@ -401,24 +391,7 @@
   function toggleMenu() {
     document.getElementById("mobileMenu").classList.toggle("active");
   }
-
-  const counters = document.querySelectorAll('.counter');
-  counters.forEach(counter => {
-    const update = () => {
-      const target = +counter.dataset.target;
-      const current = +counter.innerText;
-      const increment = target / 100;
-
-      if (current < target) {
-        counter.innerText = Math.ceil(current + increment);
-        setTimeout(update, 30);
-      } else {
-        counter.innerText = target;
-      }
-    };
-    update();
-  });
 </script>
 
 </body>
-  </html>
+        </html>
