@@ -1,125 +1,229 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Services | Sumud Innovations</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Services – Sumud Innovations</title>
 
-<style>
-:root {
-  --primary:#6a0dad;
-  --dark:#1f1f1f;
-  --light:#ffffff;
-  --gray:#f4f4f4;
-}
+  <style>
+    :root {
+      --purple: #5a2ea6;
+      --purple-dark: #4a2591;
+      --white: #ffffff;
+      --gray: #f5f5f8;
+      --text: #222;
+    }
 
-* {margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif;}
-body {background:var(--light);color:var(--dark);line-height:1.7}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-/* HEADER */
-header {position:fixed;top:0;width:100%;background:#fff;border-bottom:1px solid #eee;z-index:1000}
-.nav {max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo {font-size:22px;font-weight:bold;color:var(--primary)}
-nav ul {display:flex;gap:25px;list-style:none}
-nav a {text-decoration:none;color:var(--dark);font-weight:500}
-nav a:hover {color:var(--primary)}
-.hamburger {display:none;flex-direction:column;gap:5px;cursor:pointer}
-.hamburger span {width:25px;height:3px;background:#000}
+    body {
+      background: var(--gray);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-/* MOBILE MENU */
-.mobile-menu {
-  position:fixed;top:0;right:-100%;
-  width:260px;height:100%;
-  background:#fff;padding:80px 30px;
-  transition:.3s;box-shadow:-4px 0 10px rgba(0,0,0,.1)
-}
-.mobile-menu a {display:block;margin-bottom:20px;font-size:18px;color:#000;text-decoration:none}
-.mobile-menu.active {right:0}
+    /* NAV */
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
 
-/* HERO */
-.hero {
-  margin-top:90px;
-  padding:100px 20px;
-  background:linear-gradient(rgba(106,13,173,.85),rgba(106,13,173,.85)),
-  url("https://images.unsplash.com/photo-1522071820081-009f0129c71c") center/cover;
-  color:white;text-align:center
-}
-.hero h1 {font-size:44px;margin-bottom:15px}
-.hero p {max-width:750px;margin:auto;font-size:18px}
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-/* SECTIONS */
-.section {padding:90px 20px}
-.container {max-width:1200px;margin:auto}
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--purple);
+    }
 
-/* SERVICE BLOCK */
-.service {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:50px;
-  margin-bottom:100px;
-  align-items:center
-}
-.service img {width:100%;border-radius:12px}
-.service h2 {color:var(--primary);margin-bottom:15px}
-.service p {margin-bottom:15px}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
 
-/* CTA */
-.cta {
-  background:var(--primary);
-  color:white;
-  text-align:center;
-  padding:90px 20px
-}
-.cta h2 {font-size:36px;margin-bottom:15px}
-.cta a {
-  display:inline-block;
-  margin-top:20px;
-  padding:14px 30px;
-  background:white;
-  color:var(--primary);
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:6px
-}
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
 
-/* FOOTER */
-footer {background:#111;color:white;padding:60px 20px}
-.footer-grid {
-  max-width:1200px;margin:auto;
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:30px
-}
-footer h4 {margin-bottom:15px}
-footer a {color:#ccc;text-decoration:none;display:block;margin-bottom:10px}
-footer a:hover {color:#fff}
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
 
-/* RESPONSIVE */
-@media(max-width:900px){
-  nav ul {display:none}
-  .hamburger {display:flex}
-  .service {grid-template-columns:1fr}
-}
-</style>
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 75%;
+      height: 100%;
+      background: var(--purple);
+      padding: 60px 30px;
+      transition: 0.3s;
+      z-index: 2000;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      margin-bottom: 25px;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--purple), #7c4dff);
+      color: white;
+      padding: 110px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    /* SECTIONS */
+    .section {
+      max-width: 1200px;
+      margin: auto;
+      padding: 90px 20px;
+    }
+
+    .section h2 {
+      color: var(--purple);
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .service {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 90px;
+      align-items: center;
+    }
+
+    .service img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+
+    .service ul {
+      margin-top: 20px;
+      padding-left: 20px;
+    }
+
+    .service li {
+      margin-bottom: 10px;
+    }
+
+    .cta {
+      background: var(--purple);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 30px;
+      background: white;
+      color: var(--purple);
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 50px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .service {
+        grid-template-columns: 1fr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
   <div class="nav">
     <div class="logo">Sumud Innovations</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
@@ -133,86 +237,135 @@ footer a:hover {color:#fff}
 
 <section class="hero">
   <h1>Our Services</h1>
-  <p>End-to-end software development services designed for scalability, reliability, and long-term success.</p>
+  <p>
+    We provide end-to-end software development services focused on scalability,
+    reliability, and long-term business growth.
+  </p>
 </section>
 
 <section class="section">
-  <div class="container">
 
-    <div class="service">
-      <div>
-        <h2>Web Application Development</h2>
-        <p>We build modern, secure, and scalable web applications using proven architectures.</p>
-        <p>From MVPs to enterprise platforms, our solutions are designed to grow with your business.</p>
-        <p>Technologies include modern frontend frameworks, robust backend systems, and cloud-ready deployments.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
+  <div class="service">
+    <div>
+      <h2>Web Application Development</h2>
+      <p>
+        We build modern, secure, and scalable web applications tailored to your
+        business needs. From MVPs to complex SaaS platforms, our solutions are
+        designed to grow with you.
+      </p>
+      <ul>
+        <li>Custom dashboards & admin panels</li>
+        <li>SaaS & subscription platforms</li>
+        <li>APIs & backend systems</li>
+        <li>Performance & security optimization</li>
+      </ul>
     </div>
-
-    <div class="service">
-      <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="">
-      <div>
-        <h2>Mobile Application Development</h2>
-        <p>Native and cross-platform mobile apps built for performance and usability.</p>
-        <p>We handle everything from design to deployment on Android and iOS.</p>
-        <p>Our focus is smooth user experience, offline reliability, and long-term maintainability.</p>
-      </div>
-    </div>
-
-    <div class="service">
-      <div>
-        <h2>Custom Software Solutions</h2>
-        <p>Tailored internal tools, dashboards, automation systems, and integrations.</p>
-        <p>We solve unique operational challenges with clean, well-documented code.</p>
-        <p>Perfect for businesses that need systems built exactly for their workflows.</p>
-      </div>
-      <img src="https://images.unsplash.com/photo-1600267165603-7e1b69e88a71" alt="">
-    </div>
-
-    <div class="service">
-      <img src="https://images.unsplash.com/photo-1545235617-9465d2a55698" alt="">
-      <div>
-        <h2>UI / UX Design</h2>
-        <p>User-centered design that improves engagement and usability.</p>
-        <p>We design interfaces that feel intuitive, modern, and aligned with your brand.</p>
-        <p>From wireframes to polished visuals.</p>
-      </div>
-    </div>
-
+    <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d" alt="">
   </div>
+
+  <div class="service">
+    <img src="https://images.unsplash.com/photo-1553877522-43269d4ea984" alt="">
+    <div>
+      <h2>Mobile App Development</h2>
+      <p>
+        We create reliable mobile experiences that users love. Whether native or
+        cross-platform, our apps are optimized for performance and usability.
+      </p>
+      <ul>
+        <li>Android & iOS development</li>
+        <li>Cross-platform solutions</li>
+        <li>Backend & API integration</li>
+        <li>App store deployment support</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service">
+    <div>
+      <h2>MVP & Startup Development</h2>
+      <p>
+        Launch faster with a focused MVP. We help founders validate ideas,
+        build lean products, and prepare for scaling.
+      </p>
+      <ul>
+        <li>Idea validation & planning</li>
+        <li>Rapid MVP development</li>
+        <li>Scalable architecture</li>
+        <li>Investor-ready products</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="">
+  </div>
+
+  <div class="service">
+    <img src="https://images.unsplash.com/photo-1600267165477-6d4cc741b379" alt="">
+    <div>
+      <h2>UI / UX Design</h2>
+      <p>
+        We design clean, intuitive interfaces that enhance usability and drive
+        engagement across all platforms.
+      </p>
+      <ul>
+        <li>User research & wireframing</li>
+        <li>High-fidelity UI design</li>
+        <li>Design systems</li>
+        <li>Accessibility & usability</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="service">
+    <div>
+      <h2>Maintenance & Scaling</h2>
+      <p>
+        Long-term support, optimization, and feature expansion to keep your
+        product running smoothly as your business grows.
+      </p>
+      <ul>
+        <li>Performance monitoring</li>
+        <li>Bug fixes & enhancements</li>
+        <li>Infrastructure scaling</li>
+        <li>Ongoing technical support</li>
+      </ul>
+    </div>
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="">
+  </div>
+
 </section>
 
 <section class="cta">
-  <h2>Ready to Build?</h2>
-  <p>Let’s turn your idea into a scalable product.</p>
+  <h2>Ready to Start Your Project?</h2>
+  <p>Let’s talk about how we can build something resilient together.</p>
   <a href="contact.html">Start a Project</a>
 </section>
 
 <footer>
-  <div class="footer-grid">
+  <div class="footer-content">
     <div>
-      <h4>Sumud Innovations</h4>
+      <strong>Sumud Innovations</strong>
       <p>Building resilient software for long-term success.</p>
     </div>
     <div>
-      <h4>Company</h4>
+      <strong>Pages</strong>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
     </div>
     <div>
-      <h4>Connect</h4>
+      <strong>Social</strong>
       <a href="#">LinkedIn</a>
-      <a href="#">Twitter</a>
-      <a href="#">Facebook</a>
+      <a href="#">Twitter / X</a>
+      <a href="#">GitHub</a>
     </div>
   </div>
 </footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
 </script>
 
 </body>
