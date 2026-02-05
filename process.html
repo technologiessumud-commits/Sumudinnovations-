@@ -1,90 +1,269 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Our Process | Sumud Innovations</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Process – Sumud Innovations</title>
 
-<style>
-:root {--primary:#6a0dad;--dark:#1f1f1f;--light:#fff;--gray:#f4f4f4}
-*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
-body{background:#fff;color:#000;line-height:1.7}
+  <style>
+    :root {
+      --purple: #5a2ea6;
+      --purple-dark: #4a2591;
+      --white: #ffffff;
+      --gray: #f5f5f8;
+      --text: #222;
+    }
 
-/* SHARED HEADER (same as services) */
-header{position:fixed;top:0;width:100%;background:#fff;border-bottom:1px solid #eee;z-index:1000}
-.nav{max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
-.logo{font-size:22px;font-weight:bold;color:var(--primary)}
-nav ul{display:flex;gap:25px;list-style:none}
-nav a{text-decoration:none;color:#000}
-.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
-.hamburger span{width:25px;height:3px;background:#000}
-.mobile-menu{position:fixed;top:0;right:-100%;width:260px;height:100%;background:#fff;padding:80px 30px;transition:.3s}
-.mobile-menu.active{right:0}
-.mobile-menu a{display:block;margin-bottom:20px;color:#000;text-decoration:none;font-size:18px}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-/* HERO */
-.hero{
-  margin-top:90px;
-  padding:100px 20px;
-  background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
-  url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover;
-  color:#fff;text-align:center
-}
-.hero h1{font-size:44px;margin-bottom:15px}
+    body {
+      background: var(--gray);
+      color: var(--text);
+      line-height: 1.7;
+    }
 
-/* TIMELINE */
-.timeline{max-width:900px;margin:100px auto;padding:0 20px}
-.step{
-  display:grid;
-  grid-template-columns:80px 1fr;
-  gap:30px;
-  margin-bottom:80px;
-}
-.circle{
-  width:60px;height:60px;
-  background:var(--primary);
-  color:white;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-size:20px;
-  border-radius:50%;
-}
-.step img{width:100%;border-radius:10px;margin-top:15px}
+    /* NAV */
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
 
-/* FOOTER */
-footer{background:#111;color:white;padding:60px 20px}
-footer a{color:#ccc;text-decoration:none;display:block;margin-bottom:10px}
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-@media(max-width:900px){
-  nav ul{display:none}
-  .hamburger{display:flex}
-  .step{grid-template-columns:1fr}
-}
-</style>
+    .logo {
+      font-weight: bold;
+      font-size: 20px;
+      color: var(--purple);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
+
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 75%;
+      height: 100%;
+      background: var(--purple);
+      padding: 60px 30px;
+      transition: 0.3s;
+      z-index: 2000;
+    }
+
+    .mobile-menu a {
+      display: block;
+      color: white;
+      font-size: 20px;
+      text-decoration: none;
+      margin-bottom: 25px;
+    }
+
+    .mobile-menu.active {
+      right: 0;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, var(--purple), #7c4dff);
+      color: white;
+      padding: 110px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      max-width: 850px;
+      margin: auto;
+      font-size: 18px;
+      opacity: 0.95;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      max-width: 1100px;
+      margin: auto;
+      padding: 100px 20px;
+      position: relative;
+    }
+
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 0;
+      width: 4px;
+      height: 100%;
+      background: var(--purple);
+      transform: translateX(-50%);
+    }
+
+    .step {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      margin-bottom: 100px;
+      align-items: center;
+    }
+
+    .step:nth-child(even) {
+      direction: rtl;
+    }
+
+    .step:nth-child(even) > * {
+      direction: ltr;
+    }
+
+    .step-content {
+      background: white;
+      padding: 40px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
+
+    .step-content h2 {
+      color: var(--purple);
+      margin-bottom: 10px;
+    }
+
+    .step-content span {
+      display: inline-block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #777;
+    }
+
+    .step img {
+      width: 100%;
+      border-radius: 16px;
+      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+    }
+
+    /* CTA */
+    .cta {
+      background: var(--purple);
+      color: white;
+      padding: 90px 20px;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 36px;
+      margin-bottom: 15px;
+    }
+
+    .cta a {
+      display: inline-block;
+      margin-top: 25px;
+      padding: 15px 30px;
+      background: white;
+      color: var(--purple);
+      font-weight: bold;
+      border-radius: 8px;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 50px 20px;
+    }
+
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
+
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    footer strong {
+      color: white;
+    }
+
+    @media (max-width: 900px) {
+      .timeline::before {
+        left: 20px;
+      }
+
+      .step {
+        grid-template-columns: 1fr;
+        padding-left: 40px;
+      }
+
+      .step:nth-child(even) {
+        direction: ltr;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
 <header>
   <div class="nav">
     <div class="logo">Sumud Innovations</div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Home</a>
+  <a href="about.html">About</a>
   <a href="services.html">Services</a>
   <a href="process.html">Process</a>
   <a href="contact.html">Contact</a>
@@ -92,70 +271,122 @@ footer a{color:#ccc;text-decoration:none;display:block;margin-bottom:10px}
 
 <section class="hero">
   <h1>Our Development Process</h1>
-  <p>A transparent, structured approach from idea to launch.</p>
+  <p>
+    A structured, transparent approach that ensures quality,
+    scalability, and long-term success.
+  </p>
 </section>
 
 <section class="timeline">
 
   <div class="step">
-    <div class="circle">1</div>
-    <div>
-      <h2>Discovery & Planning</h2>
-      <p>We deeply understand your goals, users, and constraints.</p>
-      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+    <div class="step-content">
+      <span>Step 1</span>
+      <h2>Discovery & Strategy</h2>
+      <p>
+        We deeply understand your business goals, users, and technical
+        requirements to create a solid roadmap.
+      </p>
     </div>
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="">
   </div>
 
   <div class="step">
-    <div class="circle">2</div>
-    <div>
-      <h2>Design & Architecture</h2>
-      <p>System architecture and user experience design.</p>
-      <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5">
+    <div class="step-content">
+      <span>Step 2</span>
+      <h2>Design & Planning</h2>
+      <p>
+        Wireframes, UI/UX design, and system architecture planning ensure
+        a smooth and efficient build phase.
+      </p>
     </div>
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
   </div>
 
   <div class="step">
-    <div class="circle">3</div>
-    <div>
+    <div class="step-content">
+      <span>Step 3</span>
       <h2>Development</h2>
-      <p>Clean, scalable, and well-tested code.</p>
-      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+      <p>
+        Clean, scalable, and secure code is written using modern technologies
+        and best practices.
+      </p>
     </div>
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
   </div>
 
   <div class="step">
-    <div class="circle">4</div>
-    <div>
-      <h2>Testing & QA</h2>
-      <p>Performance, security, and reliability testing.</p>
-      <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+    <div class="step-content">
+      <span>Step 4</span>
+      <h2>Testing & Quality Assurance</h2>
+      <p>
+        Rigorous testing ensures reliability, performance, and security
+        before launch.
+      </p>
     </div>
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="">
   </div>
 
   <div class="step">
-    <div class="circle">5</div>
-    <div>
-      <h2>Launch & Support</h2>
-      <p>Deployment, monitoring, and long-term partnership.</p>
-      <img src="https://images.unsplash.com/photo-1532619675605-1ede6c2ed2b0">
+    <div class="step-content">
+      <span>Step 5</span>
+      <h2>Launch & Deployment</h2>
+      <p>
+        We deploy, monitor, and ensure a smooth product launch with
+        minimal downtime.
+      </p>
     </div>
+    <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="">
+  </div>
+
+  <div class="step">
+    <div class="step-content">
+      <span>Step 6</span>
+      <h2>Maintenance & Scaling</h2>
+      <p>
+        Continuous improvements, monitoring, and scaling as your business
+        grows.
+      </p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="">
   </div>
 
 </section>
 
+<section class="cta">
+  <h2>Ready to Build With Confidence?</h2>
+  <p>Let’s turn your idea into a resilient product.</p>
+  <a href="contact.html">Start a Project</a>
+</section>
+
 <footer>
-  <div>
-    <h4>Sumud Innovations</h4>
-    <p>Reliable software. Long-term mindset.</p>
+  <div class="footer-content">
+    <div>
+      <strong>Sumud Innovations</strong>
+      <p>Building resilient software for long-term success.</p>
+    </div>
+    <div>
+      <strong>Pages</strong>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <strong>Social</strong>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter / X</a>
+      <a href="#">GitHub</a>
+    </div>
   </div>
 </footer>
 
 <script>
-function toggleMenu(){
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
 </script>
 
 </body>
-  </html>
+</html>
