@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sumud Innovations | Software Development Company</title>
+
+<style>
+:root{--p:#6a0dad;--d:#1f1f1f;--l:#fff;--g:#f4f4f4}
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,Helvetica,sans-serif}
+body{background:#fff;color:#000;line-height:1.7}
+
+/* HEADER */
+header{position:fixed;top:0;width:100%;background:#fff;border-bottom:1px solid #eee;z-index:1000}
+.nav{max-width:1200px;margin:auto;padding:15px 20px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:22px;font-weight:bold;color:var(--p)}
+nav ul{display:flex;gap:25px;list-style:none}
+nav a{text-decoration:none;color:#000}
+nav a:hover{color:var(--p)}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer}
+.hamburger span{width:25px;height:3px;background:#000}
+.mobile-menu{position:fixed;top:0;right:-100%;width:260px;height:100%;background:#fff;padding:80px 30px;transition:.3s}
+.mobile-menu.active{right:0}
+.mobile-menu a{display:block;margin-bottom:20px;color:#000;font-size:18px;text-decoration:none}
+
+/* HERO */
+.hero{
+  margin-top:90px;
+  padding:120px 20px;
+  background:linear-gradient(rgba(106,13,173,.9),rgba(106,13,173,.9)),
+  url("https://images.unsplash.com/photo-1517245386807-bb43f82c33c4") center/cover;
+  color:#fff;text-align:center
+}
+.hero h1{font-size:46px;margin-bottom:15px}
+.hero p{max-width:750px;margin:auto;font-size:18px}
+.hero a{
+  display:inline-block;margin-top:25px;
+  background:#fff;color:var(--p);
+  padding:14px 30px;border-radius:6px;
+  text-decoration:none;font-weight:bold
+}
+
+/* SECTIONS */
+.section{padding:100px 20px}
+.container{max-width:1200px;margin:auto}
+
+/* GRID */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:30px}
+.card{background:var(--g);padding:30px;border-radius:12px}
+.card img{width:100%;border-radius:10px;margin-bottom:15px}
+.card h3{color:var(--p);margin-bottom:10px}
+
+/* IMAGE SPLIT */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.split img{width:100%;border-radius:12px}
+
+/* CTA */
+.cta{background:var(--p);color:#fff;text-align:center;padding:100px 20px}
+.cta h2{font-size:38px;margin-bottom:15px}
+.cta a{background:#fff;color:var(--p);padding:14px 30px;text-decoration:none;border-radius:6px;font-weight:bold}
+
+/* FOOTER */
+footer{background:#111;color:#fff;padding:60px 20px}
+.footer-grid{max-width:1200px;margin:auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:30px}
+footer a{color:#ccc;text-decoration:none;display:block;margin-bottom:10px}
+
+@media(max-width:900px){
+  nav ul{display:none}
+  .hamburger{display:flex}
+  .split{grid-template-columns:1fr}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="nav">
+    <div class="logo">Sumud Innovations</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="process.html">Process</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="index.html">Home</a>
+  <a href="about.html">About</a>
+  <a href="services.html">Services</a>
+  <a href="process.html">Process</a>
+  <a href="contact.html">Contact</a>
+</div>
+
+<section class="hero">
+  <h1>Building Resilient Software for Long-Term Success</h1>
+  <p>Sumud Innovations partners with startups and businesses to build scalable, secure, and future-ready digital products.</p>
+  <a href="contact.html">Start a Project</a>
+</section>
+
+<section class="section">
+  <div class="container grid">
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1518770660439-4636190af475">
+      <h3>Engineering Excellence</h3>
+      <p>Clean architecture, maintainable code, and scalable systems.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786">
+      <h3>Startup-Focused</h3>
+      <p>Flexible engagement models designed for growth.</p>
+    </div>
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1552664730-d307ca884978">
+      <h3>Transparent Process</h3>
+      <p>Clear communication from idea to launch.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container split">
+    <div>
+      <h2>Why Sumud Innovations?</h2>
+      <p>We don’t just ship software — we build long-term products.</p>
+      <p>Our focus on resilience, scalability, and quality sets us apart.</p>
+    </div>
+    <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c">
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Let’s Build Something That Lasts</h2>
+  <a href="contact.html">Contact Us</a>
+</section>
+
+<footer>
+  <div class="footer-grid">
+    <div>
+      <h4>Sumud Innovations</h4>
+      <p>Resilient software. Real partnerships.</p>
+    </div>
+    <div>
+      <h4>Pages</h4>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
+    </div>
+    <div>
+      <h4>Social</h4>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter</a>
+      <a href="#">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+function toggleMenu(){
+  document.getElementById("mobileMenu").classList.toggle("active");
+}
+</script>
+
+</body>
+        </html>
