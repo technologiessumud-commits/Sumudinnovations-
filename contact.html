@@ -1,272 +1,248 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us | Sumud Innovations</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us – Sumud Innovations</title>
 
-<!-- INTERNAL CSS -->
-<style>
-:root {
-  --primary: #6a0dad;
-  --secondary: #ffffff;
-  --dark: #1f1f1f;
-  --gray: #f5f5f5;
-}
+  <style>
+    :root {
+      --purple: #5a2ea6;
+      --purple-dark: #4a2591;
+      --white: #ffffff;
+      --gray: #f5f5f8;
+      --text: #222;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
-}
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, Helvetica, sans-serif;
+    }
 
-body {
-  background: var(--secondary);
-  color: var(--dark);
-  line-height: 1.6;
-}
+    body {
+      background: var(--gray);
+      color: var(--text);
+      line-height: 1.6;
+    }
 
-/* ================= HEADER ================= */
-header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: white;
-  border-bottom: 1px solid #eee;
-  z-index: 1000;
-}
+    /* ===== NAVIGATION ===== */
+    header {
+      background: var(--white);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    }
 
-.nav {
-  max-width: 1200px;
-  margin: auto;
-  padding: 15px 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
+    .nav {
+      max-width: 1200px;
+      margin: auto;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-.logo {
-  font-size: 22px;
-  font-weight: bold;
-  color: var(--primary);
-}
+    .logo {
+      font-size: 20px;
+      font-weight: bold;
+      color: var(--purple);
+    }
 
-nav ul {
-  display: flex;
-  gap: 25px;
-  list-style: none;
-}
+    .nav-links {
+      display: flex;
+      gap: 25px;
+    }
 
-nav ul li a {
-  text-decoration: none;
-  color: var(--dark);
-  font-weight: 500;
-}
+    .nav-links a {
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+    }
 
-nav ul li a:hover {
-  color: var(--primary);
-}
+    .hamburger {
+      display: none;
+      font-size: 28px;
+      cursor: pointer;
+    }
 
-/* ================= HAMBURGER ================= */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-}
+    /* ===== MOBILE MENU ===== */
+    .mobile-menu {
+      position: fixed;
+      top: 0;
+      right: -100%;
+      width: 75%;
+      height: 100%;
+      background: var(--purple);
+      padding: 60px 30px;
+      transition: 0.3s ease;
+      z-index: 2000;
+    }
 
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background: var(--dark);
-}
+    .mobile-menu a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      font-size: 20px;
+      margin-bottom: 25px;
+    }
 
-/* ================= MOBILE MENU ================= */
-.mobile-menu {
-  position: fixed;
-  top: 0;
-  right: -100%;
-  width: 260px;
-  height: 100%;
-  background: white;
-  padding: 80px 30px;
-  transition: 0.3s ease;
-  box-shadow: -4px 0 10px rgba(0,0,0,0.1);
-}
+    .mobile-menu.active {
+      right: 0;
+    }
 
-.mobile-menu a {
-  display: block;
-  margin-bottom: 20px;
-  color: var(--dark);
-  text-decoration: none;
-  font-size: 18px;
-}
+    /* ===== HERO ===== */
+    .hero {
+      background: linear-gradient(135deg, var(--purple), #7c4dff);
+      color: white;
+      padding: 100px 20px;
+      text-align: center;
+    }
 
-.mobile-menu.active {
-  right: 0;
-}
+    .hero h1 {
+      font-size: 42px;
+      margin-bottom: 15px;
+    }
 
-/* ================= HERO ================= */
-.hero {
-  margin-top: 90px;
-  padding: 80px 20px;
-  background: linear-gradient(rgba(106,13,173,0.85), rgba(106,13,173,0.85)),
-  url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d") center/cover;
-  color: white;
-  text-align: center;
-}
+    .hero p {
+      max-width: 720px;
+      margin: auto;
+      font-size: 18px;
+      opacity: 0.95;
+    }
 
-.hero h1 {
-  font-size: 42px;
-  margin-bottom: 15px;
-}
+    /* ===== CONTENT ===== */
+    .container {
+      max-width: 1200px;
+      margin: auto;
+      padding: 80px 20px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+    }
 
-.hero p {
-  max-width: 700px;
-  margin: auto;
-  font-size: 18px;
-}
+    .info h2 {
+      color: var(--purple);
+      margin-bottom: 15px;
+    }
 
-/* ================= CONTACT SECTION ================= */
-.contact-section {
-  max-width: 1200px;
-  margin: auto;
-  padding: 80px 20px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 50px;
-}
+    .info p {
+      margin-bottom: 18px;
+    }
 
-.contact-info h2 {
-  color: var(--primary);
-  margin-bottom: 20px;
-}
+    .info ul {
+      list-style: none;
+      margin-top: 20px;
+    }
 
-.contact-info img {
-  width: 100%;
-  border-radius: 10px;
-  margin: 25px 0;
-}
+    .info li {
+      margin-bottom: 10px;
+    }
 
-.contact-info p {
-  margin-bottom: 15px;
-}
+    /* ===== FORM ===== */
+    form {
+      background: white;
+      padding: 40px;
+      border-radius: 14px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+    }
 
-form {
-  background: var(--gray);
-  padding: 40px;
-  border-radius: 10px;
-}
+    form h3 {
+      color: var(--purple);
+      margin-bottom: 20px;
+    }
 
-form h3 {
-  margin-bottom: 20px;
-  color: var(--primary);
-}
+    input, textarea {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 18px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      font-size: 15px;
+    }
 
-form input,
-form textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
 
-form textarea {
-  min-height: 140px;
-}
+    button {
+      background: var(--purple);
+      color: white;
+      border: none;
+      padding: 14px;
+      width: 100%;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
 
-form button {
-  background: var(--primary);
-  color: white;
-  padding: 14px;
-  border: none;
-  border-radius: 5px;
-  width: 100%;
-  font-size: 16px;
-  cursor: pointer;
-}
+    button:hover {
+      background: var(--purple-dark);
+    }
 
-form button:hover {
-  opacity: 0.9;
-}
+    /* ===== FOOTER ===== */
+    footer {
+      background: #111;
+      color: #ccc;
+      padding: 50px 20px;
+    }
 
-/* ================= FOOTER ================= */
-footer {
-  background: #111;
-  color: white;
-  padding: 50px 20px;
-}
+    .footer-content {
+      max-width: 1200px;
+      margin: auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+    }
 
-.footer-content {
-  max-width: 1200px;
-  margin: auto;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px,1fr));
-  gap: 30px;
-}
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 8px;
+    }
 
-footer h4 {
-  margin-bottom: 15px;
-}
+    footer strong {
+      color: white;
+    }
 
-footer a {
-  color: #ccc;
-  text-decoration: none;
-  display: block;
-  margin-bottom: 10px;
-}
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .container {
+        grid-template-columns: 1fr;
+      }
 
-footer a:hover {
-  color: white;
-}
+      .nav-links {
+        display: none;
+      }
 
-.socials a {
-  display: inline-block;
-  margin-right: 10px;
-  font-size: 20px;
-}
-
-/* ================= RESPONSIVE ================= */
-@media(max-width: 900px) {
-  nav ul {
-    display: none;
-  }
-  .hamburger {
-    display: flex;
-  }
-  .contact-section {
-    grid-template-columns: 1fr;
-  }
-}
-</style>
+      .hamburger {
+        display: block;
+      }
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- HEADER -->
 <header>
   <div class="nav">
     <div class="logo">Sumud Innovations</div>
-
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="process.html">Process</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="hamburger" onclick="toggleMenu()">
-      <span></span><span></span><span></span>
+    <div class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="process.html">Process</a>
+      <a href="contact.html">Contact</a>
     </div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
-<!-- MOBILE MENU -->
 <div class="mobile-menu" id="mobileMenu">
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
@@ -275,50 +251,66 @@ footer a:hover {
   <a href="contact.html">Contact</a>
 </div>
 
-<!-- HERO -->
 <section class="hero">
-  <h1>Let’s Build Something Great</h1>
-  <p>Tell us about your idea. We’ll help you turn it into a scalable, reliable digital product.</p>
+  <h1>Let’s Build Something Resilient</h1>
+  <p>
+    Share your idea with us and we’ll help you turn it into a scalable,
+    production-ready product built for long-term success.
+  </p>
 </section>
 
-<!-- CONTACT -->
-<section class="contact-section">
-  <div class="contact-info">
-    <h2>Get in Touch</h2>
+<section class="container">
+  <div class="info">
+    <h2>Why Choose Sumud Innovations?</h2>
     <p>
-      At Sumud Innovations, we partner with startups and growing businesses to
-      build software that lasts. Whether you have an idea or an existing product,
-      we’re ready to help.
+      We partner with startups and growing businesses to design, build,
+      and maintain software that is reliable, scalable, and future-proof.
     </p>
 
-    <img src="https://images.unsplash.com/photo-1556761175-4b46a572b786" alt="Team meeting">
+    <ul>
+      <li>✔ Clean & maintainable code</li>
+      <li>✔ Clear communication</li>
+      <li>✔ Startup-friendly engagement</li>
+      <li>✔ Long-term product mindset</li>
+    </ul>
 
-    <p><strong>Email:</strong> hello@sumudinnovations.com</p>
-    <p><strong>Response time:</strong> Within 24 hours</p>
+    <p style="margin-top:20px;">
+      We typically respond within <strong>24 hours</strong>.
+    </p>
   </div>
 
-  <!-- FORMSPREE FORM -->
-  <form action="https://formspree.io/f/mvzbpael" method="POST">
-    <h3>Start Your Project</h3>
+  <form
+    action="https://formspree.io/f/mvzbpael"
+    method="POST"
+  >
+    <h3>Start a Project</h3>
 
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="name" placeholder="Your Name" required />
+    <input type="email" name="email" placeholder="Your Email" required />
+    <input type="text" name="company" placeholder="Company (optional)" />
     <textarea name="message" placeholder="Tell us about your project..." required></textarea>
+
+    <!-- REDIRECT -->
+    <input
+      type="hidden"
+      name="_redirect"
+      value="https://sumudinnovations.vercel.app/thank-you.html"
+    >
 
     <button type="submit">Send Message</button>
   </form>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="footer-content">
     <div>
-      <h4>Sumud Innovations</h4>
+      <strong>Sumud Innovations</strong>
       <p>Building resilient software for long-term success.</p>
     </div>
 
     <div>
-      <h4>Quick Links</h4>
+      <strong>Pages</strong>
+      <a href="index.html">Home</a>
       <a href="about.html">About</a>
       <a href="services.html">Services</a>
       <a href="process.html">Process</a>
@@ -326,30 +318,19 @@ footer a:hover {
     </div>
 
     <div>
-      <h4>Services</h4>
-      <a href="#">Web Development</a>
-      <a href="#">Mobile Apps</a>
-      <a href="#">Custom Software</a>
-      <a href="#">Maintenance</a>
-    </div>
-
-    <div>
-      <h4>Follow Us</h4>
-      <div class="socials">
-        <a href="#">🐦</a>
-        <a href="#">💼</a>
-        <a href="#">📘</a>
-      </div>
+      <strong>Social</strong>
+      <a href="#">LinkedIn</a>
+      <a href="#">Twitter / X</a>
+      <a href="#">GitHub</a>
     </div>
   </div>
 </footer>
 
-<!-- INTERNAL JS -->
 <script>
-function toggleMenu() {
-  document.getElementById("mobileMenu").classList.toggle("active");
-}
+  function toggleMenu() {
+    document.getElementById('mobileMenu').classList.toggle('active');
+  }
 </script>
 
 </body>
-                                  </html>
+</html>
