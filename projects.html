@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Projects | Sumud Innovations</title>
+<meta name="description" content="Explore Sumud Innovations portfolio with 20 live demo projects across industries. See our corporate, e-commerce, logistics, construction, interior design projects and more.">
+<style>
+body { margin:0; font-family: 'Segoe UI', sans-serif; background:#f9f9f9; color:#333; }
+header { background:#4B0082; color:#fff; padding:20px; display:flex; justify-content:space-between; align-items:center; }
+header h1 { margin:0; font-size:1.8rem; }
+nav a { color:#fff; margin-left:15px; text-decoration:none; font-weight:500; }
+nav a:hover { text-decoration:underline; }
+.hamburger { display:none; flex-direction:column; cursor:pointer; }
+.hamburger div { width:25px; height:3px; background:white; margin:4px 0; }
+@media(max-width:768px){
+  nav { display:none; flex-direction:column; background:#4B0082; position:absolute; top:70px; right:0; width:220px; }
+  nav.active { display:flex; }
+  .hamburger { display:flex; }
+}
+main { max-width:1200px; margin:40px auto; padding:0 20px; }
+h2 { text-align:center; color:#4B0082; margin-bottom:40px; font-size:2rem; }
+.project-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:20px; }
+.project-card { background:#fff; border-radius:10px; box-shadow:0 4px 6px rgba(0,0,0,0.1); overflow:hidden; transition:transform 0.3s; }
+.project-card:hover { transform:scale(1.03); }
+.project-card img { width:100%; height:180px; object-fit:cover; }
+.project-content { padding:15px; }
+.project-content h3 { margin:0 0 10px 0; color:#4B0082; }
+.project-content p { margin:0 0 15px 0; font-size:0.95rem; }
+.project-content a { text-decoration:none; background:#4B0082; color:white; padding:8px 15px; border-radius:5px; font-size:0.9rem; }
+.project-content a:hover { background:#6A0DAD; }
+footer { background:#222; color:white; text-align:center; padding:20px; margin-top:40px; }
+footer a { color:#fff; margin:0 10px; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Sumud Innovations</h1>
+  <div class="hamburger" onclick="toggleNav()"><div></div><div></div><div></div></div>
+  <nav id="nav">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="services.html">Services</a>
+    <a href="projects.html">Projects</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+</header>
+
+<main>
+  <h2>Our Projects</h2>
+  <div class="project-grid">
+
+<!-- START OF 20 PROJECTS -->
+
+<!-- Project 1 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1560448204-8fbb6891b2e6?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Corporate Website">
+  <div class="project-content">
+    <h3>Corporate Website</h3>
+    <p>Professional corporate website with services, team, and contact form.</p>
+    <a href="demo.html#project1">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 2 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="E-commerce Platform">
+  <div class="project-content">
+    <h3>E-commerce Platform</h3>
+    <p>Online store with product catalog, cart, checkout, and dashboard.</p>
+    <a href="demo.html#project2">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 3 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1551806238-5c5ef57c5d59?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Interior Design Portfolio">
+  <div class="project-content">
+    <h3>Interior Design Portfolio</h3>
+    <p>Portfolio website for interior design business with gallery and contact.</p>
+    <a href="demo.html#project3">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 4 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1590565975440-0d48b20c6eae?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Logistics App">
+  <div class="project-content">
+    <h3>Logistics Management App</h3>
+    <p>Track shipments, delivery schedules, and client communication.</p>
+    <a href="demo.html#project4">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 5 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1590608897129-79a6e44a5ec1?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Construction Website">
+  <div class="project-content">
+    <h3>Construction Company Website</h3>
+    <p>Modern website for construction business showcasing projects and services.</p>
+    <a href="demo.html#project5">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 6 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1505691723518-34f3ecf2d2b6?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Startup Landing Page">
+  <div class="project-content">
+    <h3>Startup Landing Page</h3>
+    <p>Landing page for startup businesses to capture leads and showcase products.</p>
+    <a href="demo.html#project6">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 7 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Mobile App Demo">
+  <div class="project-content">
+    <h3>Mobile App Demo</h3>
+    <p>Interactive mobile app demonstration for clients’ products.</p>
+    <a href="demo.html#project7">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 8 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Restaurant Website">
+  <div class="project-content">
+    <h3>Restaurant Website</h3>
+    <p>Website for restaurants including menus, reservations, and gallery.</p>
+    <a href="demo.html#project8">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 9 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1521790797524-b2497295b8f9?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Fitness App">
+  <div class="project-content">
+    <h3>Fitness App</h3>
+    <p>App to track workouts, nutrition, and progress for users.</p>
+    <a href="demo.html#project9">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 10 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1562072540-2f0b60f9d0b8?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Hotel Booking Website">
+  <div class="project-content">
+    <h3>Hotel Booking Website</h3>
+    <p>Booking system with rooms, availability, and customer portal.</p>
+    <a href="demo.html#project10">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 11 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1581091215365-7b0a52f2df45?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Educational Portal">
+  <div class="project-content">
+    <h3>Educational Portal</h3>
+    <p>Platform for schools and online courses with user management.</p>
+    <a href="demo.html#project11">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 12 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1581092795366-49ab4c1c77b0?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Medical Clinic Website">
+  <div class="project-content">
+    <h3>Medical Clinic Website</h3>
+    <p>Clinic portal with appointment booking, services, and team info.</p>
+    <a href="demo.html#project12">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 13 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Portfolio Website">
+  <div class="project-content">
+    <h3>Creative Portfolio</h3>
+    <p>Portfolio website for artists and designers with galleries and contact.</p>
+    <a href="demo.html#project13">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 14 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Blog Website">
+  <div class="project-content">
+    <h3>Blog Website</h3>
+    <p>Modern blog platform with categories, posts, and comment system.</p>
+    <a href="demo.html#project14">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 15 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Startup SaaS Dashboard">
+  <div class="project-content">
+    <h3>Startup SaaS Dashboard</h3>
+    <p>Interactive dashboard for SaaS startups with analytics and reports.</p>
+    <a href="demo.html#project15">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 16 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="NGO Website">
+  <div class="project-content">
+    <h3>NGO Website</h3>
+    <p>Non-profit organization site with donation integration and events.</p>
+    <a href="demo.html#project16">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 17 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Law Firm Website">
+  <div class="project-content">
+    <h3>Law Firm Website</h3>
+    <p>Website for law firms with services, team, and contact form.</p>
+    <a href="demo.html#project17">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 18 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1519337265831-281ec6cc8514?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Restaurant App">
+  <div class="project-content">
+    <h3>Restaurant App</h3>
+    <p>Mobile app for restaurants with menu, orders, and table booking.</p>
+    <a href="demo.html#project18">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 19 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1521790797524-b2497295b8f9?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Travel Agency Website">
+  <div class="project-content">
+    <h3>Travel Agency Website</h3>
+    <p>Travel booking website with destinations, packages, and booking form.</p>
+    <a href="demo.html#project19">View Demo</a>
+  </div>
+</div>
+
+<!-- Project 20 -->
+<div class="project-card">
+  <img src="https://images.unsplash.com/photo-1581091215365-7b0a52f2df45?crop=entropy&cs=tinysrgb&fit=max&w=800&h=600" alt="Photography Portfolio">
+  <div class="project-content">
+    <h3>Photography Portfolio</h3>
+    <p>Portfolio site for photographers with galleries, testimonials, and contact form.</p>
+    <a href="demo.html#project20">View Demo</a>
+  </div>
+</div>
+
+<!-- END OF 20 PROJECTS -->
+
+  </div>
+</main>
+
+<footer>
+  <p>&copy; 2026 Sumud Innovations</p>
+  <p>
+    <a href="https://www.facebook.com/profile.php?id=61583195955596" target="_blank">Facebook</a> | 
+    <a href="https://wa.me/2349047009387" target="_blank">WhatsApp</a> | 
+    <a href="mailto:technologiessumud@gmail.com">Gmail</a>
+  </p>
+</footer>
+
+<script>
+function toggleNav(){ document.getElementById('nav').classList.toggle('active'); }
+</script>
+
+</body>
+    </html>
