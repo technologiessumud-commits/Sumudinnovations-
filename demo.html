@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Project Demo | Sumud Innovations</title>
+<meta name="description" content="View Sumud Innovations project demo. Dynamic single page for 20 live demo projects.">
+<style>
+body { margin:0; font-family:'Segoe UI',sans-serif; background:#f9f9f9; color:#333; }
+header, footer { background:#4B0082; color:#fff; padding:20px; display:flex; justify-content:space-between; align-items:center; }
+header h1, footer p { margin:0; }
+nav a { color:#fff; margin-left:15px; text-decoration:none; font-weight:500; }
+nav a:hover { text-decoration:underline; }
+.hamburger { display:none; flex-direction:column; cursor:pointer; }
+.hamburger div { width:25px; height:3px; background:white; margin:4px 0; }
+@media(max-width:768px){ nav { display:none; flex-direction:column; background:#4B0082; position:absolute; top:70px; right:0; width:220px; } nav.active { display:flex; } .hamburger { display:flex; } }
+main { max-width:1000px; margin:40px auto; padding:0 20px; }
+section { margin-bottom:40px; }
+h2 { color:#4B0082; margin-bottom:15px; text-align:center; }
+p, li { line-height:1.6; }
+ul { margin-left:20px; }
+button { background:#4B0082; color:white; border:none; padding:10px 20px; border-radius:5px; cursor:pointer; }
+button:hover { background:#6A0DAD; }
+img { width:100%; border-radius:10px; margin-top:20px; }
+footer { flex-direction:column; text-align:center; }
+footer a { color:#fff; margin:5px; text-decoration:none; }
+footer a:hover { text-decoration:underline; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>Sumud Innovations</h1>
+<div class="hamburger" onclick="toggleNav()"><div></div><div></div><div></div></div>
+<nav id="nav">
+<a href="index.html">Home</a>
+<a
