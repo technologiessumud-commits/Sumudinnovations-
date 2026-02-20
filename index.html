@@ -128,14 +128,20 @@
       font-size: 18px;
     }
 
-    .hero a {
+    .hero-buttons {
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      flex-wrap: wrap; /* allows wrapping on small screens */
+    }
+
+    .hero-buttons a {
       background: var(--purple);
       color: white;
       padding: 15px 35px;
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
-      margin: 0 10px;
     }
 
     /* SECTIONS */
@@ -218,6 +224,7 @@
       border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      margin: 0 10px;
     }
 
     /* FOOTER */
@@ -276,6 +283,14 @@
       .hamburger {
         display: block;
       }
+      /* Make hero buttons stack on mobile */
+      .hero-buttons {
+        flex-direction: column;
+      }
+      .hero-buttons a {
+        width: 100%;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -309,8 +324,10 @@
 <section class="hero">
   <h1>Building Resilient Software for African & Global Businesses</h1>
   <p>We design and build scalable digital products that grow with your business.</p>
-  <a href="contact.html">Start a Project</a>
-  <a href="projects.html">Our Projects</a>
+  <div class="hero-buttons">
+    <a href="contact.html">Start a Project</a>
+    <a href="projects.html">Our Projects</a>
+  </div>
 </section>
 
 <section class="section">
@@ -406,10 +423,9 @@
     const menu = document.getElementById("mobileMenu");
     const hamburger = document.getElementById("hamburger");
     menu.classList.toggle("active");
-    // Hamburger stays in top-right, symbol changes
     hamburger.textContent = menu.classList.contains("active") ? "❌" : "☰";
   }
 </script>
 
 </body>
-        </html>
+  </html>
