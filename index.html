@@ -46,10 +46,25 @@
       align-items: center;
     }
 
-    .logo {
-      font-size: 22px;
-      font-weight: bold;
-      color: var(--purple);
+    /* LOGO */
+    .logo a {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+      border-radius: 12px;
+      border: 2px solid var(--purple);
+      padding: 5px;
+      background: white;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+      transition: transform 0.3s ease;
+    }
+
+    .logo img:hover {
+      transform: scale(1.05);
     }
 
     .nav-links {
@@ -67,6 +82,7 @@
       display: none;
       font-size: 28px;
       cursor: pointer;
+      user-select: none;
     }
 
     .mobile-menu {
@@ -264,6 +280,14 @@
       .hamburger {
         display: block;
       }
+      /* Make logo smaller on mobile */
+      .logo img {
+        height: 40px;
+      }
+      /* Align logo and hamburger nicely */
+      .nav {
+        justify-content: space-between;
+      }
     }
   </style>
 </head>
@@ -271,10 +295,10 @@
 
 <header>
   <div class="nav">
-    <!-- LOGO IMAGE ADDED -->
+    <!-- LOGO IMAGE IN ROUNDED BOX -->
     <div class="logo">
       <a href="index.html">
-        <img src="logo.png" alt="Sumud Innovations Logo" style="height:50px;">
+        <img src="logo.png" alt="Sumud Innovations Logo">
       </a>
     </div>
 
@@ -285,7 +309,7 @@
       <a href="process.html">Process</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
   </div>
 </header>
 
@@ -397,7 +421,10 @@
 
 <script>
   function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
+    const menu = document.getElementById("mobileMenu");
+    const hamburger = document.getElementById("hamburger");
+    menu.classList.toggle("active");
+    hamburger.textContent = menu.classList.contains("active") ? "❌" : "☰";
   }
 </script>
 
