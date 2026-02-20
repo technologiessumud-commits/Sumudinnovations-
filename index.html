@@ -4,8 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sumud Innovations | Software Development Company for Startups</title>
-
-<meta name="description" content="Sumud Innovations is a modern software development company building scalable web and mobile applications for startups and growing businesses worldwide.">
+  <meta name="description" content="Sumud Innovations is a modern software development company building scalable web and mobile applications for startups and growing businesses worldwide.">
 
   <style>
     :root {
@@ -46,25 +45,15 @@
       align-items: center;
     }
 
-    /* LOGO */
-    .logo a {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-    }
-
-    .logo img {
-      height: 50px;
-      border-radius: 12px;
-      border: 2px solid var(--purple);
-      padding: 5px;
+    /* Logo box */
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: var(--purple);
       background: white;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      transition: transform 0.3s ease;
-    }
-
-    .logo img:hover {
-      transform: scale(1.05);
+      padding: 8px 15px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
     }
 
     .nav-links {
@@ -82,7 +71,6 @@
       display: none;
       font-size: 28px;
       cursor: pointer;
-      user-select: none;
     }
 
     .mobile-menu {
@@ -133,13 +121,38 @@
       font-size: 18px;
     }
 
-    .hero a {
-      background: var(--purple);
-      color: white;
+    /* Hero buttons container */
+    .hero .buttons {
+      display: flex;
+      gap: 20px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .hero .buttons a {
       padding: 15px 35px;
       border-radius: 8px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .hero .buttons a.start-project {
+      background: var(--purple);
+      color: white;
+    }
+
+    .hero .buttons a.view-projects {
+      background: white;
+      color: var(--purple);
+    }
+
+    .hero .buttons a.start-project:hover {
+      background: var(--purple-dark);
+    }
+
+    .hero .buttons a.view-projects:hover {
+      background: #eee;
     }
 
     /* SECTIONS */
@@ -280,14 +293,6 @@
       .hamburger {
         display: block;
       }
-      /* Make logo smaller on mobile */
-      .logo img {
-        height: 40px;
-      }
-      /* Align logo and hamburger nicely */
-      .nav {
-        justify-content: space-between;
-      }
     }
   </style>
 </head>
@@ -295,13 +300,7 @@
 
 <header>
   <div class="nav">
-    <!-- LOGO IMAGE IN ROUNDED BOX -->
-    <div class="logo">
-      <a href="index.html">
-        <img src="logo.png" alt="Sumud Innovations Logo">
-      </a>
-    </div>
-
+    <div class="logo">Sumud Innovations</div>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -324,7 +323,10 @@
 <section class="hero">
   <h1>Building Resilient Software for African & Global Businesses</h1>
   <p>We design and build scalable digital products that grow with your business.</p>
-  <a href="contact.html">Start a Project</a>
+  <div class="buttons">
+    <a href="contact.html" class="start-project">Start a Project</a>
+    <a href="projects.html" class="view-projects">View Our Projects</a>
+  </div>
 </section>
 
 <section class="section">
