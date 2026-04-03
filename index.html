@@ -80,6 +80,7 @@
       user-select: none;
     }
 
+    /* Mobile Menu */
     .mobile-menu {
       position: fixed;
       top: 0;
@@ -92,6 +93,10 @@
       z-index: 2000;
     }
 
+    .mobile-menu.active {
+      right: 0;
+    }
+
     .mobile-menu a {
       display: block;
       color: white;
@@ -100,8 +105,12 @@
       text-decoration: none;
     }
 
-    .mobile-menu.active {
-      right: 0;
+    .close-btn {
+      font-size: 28px;
+      color: white;
+      margin-bottom: 30px;
+      cursor: pointer;
+      user-select: none;
     }
 
     /* HERO */
@@ -132,7 +141,7 @@
       display: flex;
       gap: 10px;
       justify-content: center;
-      flex-wrap: wrap; /* allows wrapping on small screens */
+      flex-wrap: wrap;
     }
 
     .hero-buttons a {
@@ -167,41 +176,95 @@
       margin-bottom: 15px;
     }
 
-    /* TESTIMONIALS */
+    /* FAQ */
+    .faq {
+      max-width: 1200px;
+      margin: auto;
+      padding: 100px 20px;
+    }
+
+    .faq h2 {
+      text-align: center;
+      color: var(--purple);
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+      border-radius: 12px;
+      background: white;
+      padding: 20px;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      transition: 0.3s;
+    }
+
+    .faq-item:hover {
+      transform: translateY(-3px);
+    }
+
+    .faq-item h3 {
+      font-size: 20px;
+      color: var(--purple);
+    }
+
+    .faq-item p {
+      display: none;
+      margin-top: 10px;
+      color: var(--dark);
+    }
+
+    .faq-item.active p {
+      display: block;
+    }
+
+    /* TESTIMONIALS CAROUSEL */
     .testimonials {
       background: var(--purple);
       color: white;
       padding: 100px 20px;
+      overflow: hidden;
+      position: relative;
     }
 
-    .testimonial-grid {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    .testimonials h2 {
+      text-align: center;
+      margin-bottom: 50px;
+      font-size: 36px;
+    }
+
+    .testimonial-carousel {
+      display: flex;
       gap: 30px;
+      transition: transform 0.5s ease-in-out;
     }
 
-    .testimonial {
+    .testimonial-card {
       background: white;
       color: var(--dark);
       padding: 30px;
       border-radius: 16px;
+      flex: 0 0 30%;
+      min-width: 280px;
       text-align: center;
     }
 
-    .testimonial img {
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      object-fit: cover;
+    .testimonial-card p {
+      font-size: 16px;
       margin-bottom: 15px;
     }
 
-    .testimonial strong {
+    .testimonial-card strong {
       display: block;
       margin-top: 10px;
       color: var(--purple);
+      font-size: 18px;
+    }
+
+    .testimonial-rating {
+      color: gold;
+      margin-bottom: 10px;
     }
 
     /* CTA */
@@ -283,13 +346,15 @@
       .hamburger {
         display: block;
       }
-      /* Make hero buttons stack on mobile */
       .hero-buttons {
         flex-direction: column;
       }
       .hero-buttons a {
         width: 100%;
         text-align: center;
+      }
+      .testimonial-card {
+        flex: 0 0 80%;
       }
     }
   </style>
@@ -309,11 +374,12 @@
       <a href="process.html">Process</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" id="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="hamburger" onclick="openMenu()">☰</div>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
+  <div class="close-btn" onclick="closeMenu()">✕</div>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
@@ -333,10 +399,7 @@
 <section class="section">
   <div>
     <h2>Purpose-Driven Engineering</h2>
-    <p>
-      We focus on clean architecture, scalability, and long-term reliability
-      to ensure your software remains valuable for years.
-    </p>
+    <p>We focus on clean architecture, scalability, and long-term reliability to ensure your software remains valuable for years.</p>
   </div>
   <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
 </section>
@@ -345,30 +408,51 @@
   <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c">
   <div>
     <h2>Built for Growth</h2>
-    <p>
-      Our systems evolve with your business, adapting to scale, performance,
-      and security demands.
-    </p>
+    <p>Our systems evolve with your business, adapting to scale, performance, and security demands.</p>
+  </div>
+</section>
+
+<section class="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq-item">
+    <h3>What services does Sumud Innovations offer?</h3>
+    <p>We provide web & mobile development, system architecture, UI/UX design, and consulting for startups.</p>
+  </div>
+  <div class="faq-item">
+    <h3>How long does it take to build a project?</h3>
+    <p>Project timelines vary depending on complexity, but most startup projects take 6–12 weeks.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Do you provide post-launch support?</h3>
+    <p>Yes, we offer ongoing maintenance, updates, and optimization services.</p>
+  </div>
+  <div class="faq-item">
+    <h3>Can you help scale existing products?</h3>
+    <p>Absolutely. We specialize in optimizing and scaling digital platforms to meet growing demand.</p>
+  </div>
+  <div class="faq-item">
+    <h3>What industries do you serve?</h3>
+    <p>We serve fintech, e-commerce, health tech, education, and other startup-focused industries.</p>
   </div>
 </section>
 
 <section class="testimonials">
-  <h2 style="text-align:center;margin-bottom:50px;">Trusted by Clients</h2>
-  <div class="testimonial-grid">
-    <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/men/12.jpg">
-      <p>“Reliable, professional, and highly skilled.”</p>
-      <strong>Kwame Mensah – Ghana</strong>
+  <h2>Trusted by Clients</h2>
+  <div class="testimonial-carousel" id="testimonialCarousel">
+    <div class="testimonial-card">
+      <div class="testimonial-rating">★★★★★</div>
+      <p>Reliable, professional, and highly skilled.</p>
+      <strong>Ovampa</strong>
     </div>
-    <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/women/55.jpg">
-      <p>“They truly understand startup needs.”</p>
-      <strong>Amina Bello – Nigeria</strong>
+    <div class="testimonial-card">
+      <div class="testimonial-rating">★★★★★</div>
+      <p>They truly understand startup needs.</p>
+      <strong>RoyalTech</strong>
     </div>
-    <div class="testimonial">
-      <img src="https://randomuser.me/api/portraits/men/48.jpg">
-      <p>“Our platform is now stable and scalable.”</p>
-      <strong>Thabo Mokoena – South Africa</strong>
+    <div class="testimonial-card">
+      <div class="testimonial-rating">★★★★★</div>
+      <p>Our platform is now stable and scalable.</p>
+      <strong>Femi Couture</strong>
     </div>
   </div>
 </section>
@@ -383,9 +467,9 @@
   <div class="footer-content">
     <div>
       <strong>Sumud Innovations</strong>
-      <p>Resilient software for long-term success.</p>
+      <p>Resilient software for long-term success. Specializing in scalable, secure, and high-performing digital solutions across Africa and globally.</p>
+      <p>Contact: <a href="mailto:sumudinnovation4@gmail.com" style="color:white;">sumudinnovation4@gmail.com</a></p>
     </div>
-
     <div>
       <strong>Quick Links</strong>
       <a href="index.html">Home</a>
@@ -394,38 +478,84 @@
       <a href="process.html">Process</a>
       <a href="contact.html">Contact</a>
     </div>
-
     <div>
       <strong>Connect</strong>
       <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61583195955596" target="_blank">
-          <svg viewBox="0 0 24 24">
-            <path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12z"/>
-          </svg>
+        <a href="https://www.facebook.com/profile.php?id=61588407906847" target="_blank">
+          <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12z"/></svg>
         </a>
         <a href="https://wa.me/2349047009387" target="_blank">
-          <svg viewBox="0 0 24 24">
-            <path d="M20.5 3.5A11 11 0 0 0 3.3 17.7L2 22l4.4-1.2A11 11 0 1 0 20.5 3.5zM12 20a9 9 0 0 1-4.6-1.2l-.3-.2-2.7.7.7-2.6-.2-.3A9 9 0 1 1 12 20zm5-6.5c-.3-.2-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-1 .9-.4.1-.7-.1a7.5 7.5 0 0 1-2.2-1.4 8.4 8.4 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6s-.7-1.7-.9-2.3c-.2-.6-.4-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.2 1.4 3.4a14.6 14.6 0 0 0 5.6 5.6c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.3.2-.6.2-1.2.1-1.3-.1-.1-.3-.2-.6-.4z"/>
-          </svg>
+          <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.7L2 22l4.4-1.2A11 11 0 1 0 20.5 3.5zM12 20a9 9 0 0 1-4.6-1.2l-.3-.2-2.7.7.7-2.6-.2-.3A9 9 0 1 1 12 20zm5-6.5c-.3-.2-1.7-.8-2-.9s-.5-.1-.7.1-.8.9-1 .9-.4.1-.7-.1a7.5 7.5 0 0 1-2.2-1.4 8.4 8.4 0 0 1-1.6-2c-.2-.3 0-.5.1-.7l.5-.6c.2-.2.3-.4.4-.6.1-.2 0-.4 0-.6s-.7-1.7-.9-2.3c-.2-.6-.4-.5-.7-.5h-.6c-.2 0-.6.1-.9.4s-1.2 1.1-1.2 2.7 1.2 3.2 1.4 3.4a14.6 14.6 0 0 0 5.6 5.6c.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.5-.1 1.7-.7 2-1.3.2-.6.2-1.2.1-1.3-.1-.1-.3-.2-.6-.4z"/></svg>
         </a>
-        <a href="mailto:technologiessumud@gmail.com">
-          <svg viewBox="0 0 24 24">
-            <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/>
-          </svg>
+        <a href="mailto:sumudinnovation4@gmail.com">
+          <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
       </div>
     </div>
   </div>
 </footer>
-
 <script>
-  function toggleMenu() {
-    const menu = document.getElementById("mobileMenu");
-    const hamburger = document.getElementById("hamburger");
-    menu.classList.toggle("active");
-    hamburger.textContent = menu.classList.contains("active") ? "❌" : "☰";
+  // Hamburger menu
+  function openMenu() {
+    document.getElementById("mobileMenu").classList.add("active");
   }
-</script>
 
+  function closeMenu() {
+    document.getElementById("mobileMenu").classList.remove("active");
+  }
+
+  // FAQ toggle
+  const faqItems = document.querySelectorAll('.faq-item');
+  faqItems.forEach(item => {
+    item.addEventListener('click', () => {
+      item.classList.toggle('active');
+    });
+  });
+
+  // Testimonial carousel
+  const carousel = document.getElementById('testimonialCarousel');
+  let index = 0;
+  const totalCards = carousel.children.length;
+
+  function showNextTestimonial() {
+    index++;
+    if (index >= totalCards) index = 0;
+    const offset = -index * carousel.children[0].offsetWidth - 30 * index; // includes gap
+    carousel.style.transform = `translateX(${offset}px)`;
+  }
+
+  // Autoplay every 3 seconds
+  setInterval(showNextTestimonial, 3000);
+
+  // Optional: make carousel draggable/swipeable
+  let isDown = false;
+  let startX;
+  let scrollLeft;
+
+  carousel.addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.offsetLeft;
+    carousel.style.cursor = 'grabbing';
+  });
+
+  carousel.addEventListener('mouseleave', () => {
+    isDown = false;
+    carousel.style.cursor = 'grab';
+  });
+
+  carousel.addEventListener('mouseup', () => {
+    isDown = false;
+    carousel.style.cursor = 'grab';
+  });
+
+  carousel.addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 1; // scroll-fast
+    carousel.style.transform = `translateX(${scrollLeft + walk}px)`;
+  });
+</script>
 </body>
-  </html>
+</html>
