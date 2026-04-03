@@ -3,9 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>About Sumud Innovations | Resilient Software Development Team</title>
-
-<meta name="description" content="Learn about Sumud Innovations, our mission, values, and leadership team focused on building reliable and scalable software solutions for businesses and startups.">
+  <title>About Sumud Innovations | Resilient Software Development Team</title>
+  <meta name="description" content="Learn about Sumud Innovations, our mission, values, and leadership team focused on building reliable and scalable software solutions for businesses and startups.">
 
   <style>
     :root {
@@ -86,6 +85,13 @@
       font-size: 20px;
       margin-bottom: 25px;
       text-decoration: none;
+    }
+
+    .close-btn {
+      font-size: 30px;
+      color: white;
+      margin-bottom: 40px;
+      cursor: pointer;
     }
 
     .mobile-menu.active {
@@ -255,11 +261,12 @@
       <a href="process.html">Process</a>
       <a href="contact.html">Contact</a>
     </div>
-    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <div class="hamburger" onclick="openMenu()">☰</div>
   </div>
 </header>
 
 <div class="mobile-menu" id="mobileMenu">
+  <div class="close-btn" onclick="closeMenu()">✕</div>
   <a href="index.html">Home</a>
   <a href="about.html">About</a>
   <a href="services.html">Services</a>
@@ -276,17 +283,10 @@
   <div class="grid">
     <div>
       <h2>Who We Are</h2>
-      <p>
-        Sumud Innovations is a modern software development company focused on
-        building scalable, secure, and reliable digital products for startups
-        and growing businesses.
-      </p>
-      <p>
-        Our team combines technical excellence with clear communication and a
-        long-term product mindset.
-      </p>
+      <p>Sumud Innovations is a modern software development company focused on building scalable, secure, and reliable digital products for startups and growing businesses.</p>
+      <p>Our team combines technical excellence with clear communication and a long-term product mindset.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1589571894960-20bbe2828d0a">
+    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df">
   </div>
 </section>
 
@@ -345,13 +345,13 @@
     <div>
       <strong>Connect</strong>
       <div class="social-icons">
-        <a href="https://www.facebook.com/profile.php?id=61583195955596" target="_blank">
+        <a href="https://www.facebook.com/profile.php?id=61588407906847" target="_blank">
           <svg viewBox="0 0 24 24"><path d="M22 12a10 10 0 1 0-11.6 9.9v-7h-2v-3h2V9.5c0-2 1.2-3.1 3-3.1.9 0 1.8.1 1.8.1v2h-1c-1 0-1.3.6-1.3 1.2V12h2.6l-.4 3h-2.2v7A10 10 0 0 0 22 12z"/></svg>
         </a>
         <a href="https://wa.me/2349047009387" target="_blank">
           <svg viewBox="0 0 24 24"><path d="M20.5 3.5A11 11 0 0 0 3.3 17.7L2 22l4.4-1.2A11 11 0 1 0 20.5 3.5z"/></svg>
         </a>
-        <a href="mailto:technologiessumud@gmail.com">
+        <a href="mailto:sumudinnovation4@gmail.com">
           <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
         </a>
       </div>
@@ -360,8 +360,12 @@
 </footer>
 
 <script>
-  function toggleMenu() {
-    document.getElementById("mobileMenu").classList.toggle("active");
+  function openMenu(){
+    document.getElementById("mobileMenu").classList.add("active");
+  }
+
+  function closeMenu(){
+    document.getElementById("mobileMenu").classList.remove("active");
   }
 </script>
 
