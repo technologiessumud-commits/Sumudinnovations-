@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://sumudinnovations.vercel.app/sitemap.xml
+Sitemap: https://alphastack.vercel.app/sitemap.xml
