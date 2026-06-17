@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Projects | Alphastack Digital Solutions</title>
-  <meta name="description" content="Explore the projects developed by Alphastack Digital Solutions. We build modern websites and applications for startups and growing businesses.">
+  <title>Our Projects | AlphaStack Digital Solutions</title>
+  <meta name="description" content="Explore the projects developed by AlphaStack Digital Solutions. We build modern websites and applications for startups and growing businesses.">
+
   <link rel="canonical" href="https://alphastack.vercel.app/projects.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Our Projects | AlphaStack Digital Solutions" />
+  <meta property="og:description" content="Explore projects built by AlphaStack Digital Solutions for startups and growing businesses." />
   <meta property="og:url" content="https://alphastack.vercel.app/projects.html" />
-  <meta property="og:site_name" content="Alphastack Digital Solutions" />
+  <meta property="og:site_name" content="AlphaStack Digital Solutions" />
 
   <style>
     :root {
@@ -17,52 +21,49 @@
       --dark: #1a1a1a;
     }
 
-    * {margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif;}
-    body {background: var(--gray); color: var(--dark); line-height: 1.7;}
+    * { margin: 0; padding: 0; box-sizing: border-box; font-family: Arial, Helvetica, sans-serif; }
+    body { background: var(--gray); color: var(--dark); line-height: 1.7; }
 
-    /* NAV */
-    header {background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.08);}
-    .nav {max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center;}
-    .logo {font-size: 22px; font-weight: bold; color: var(--purple); background: white; padding: 8px 15px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.15);}
-    .nav-links {display: flex; gap: 25px;}
-    .nav-links a {text-decoration: none; color: var(--dark); font-weight: 600;}
-    .hamburger {display: none; font-size: 28px; cursor: pointer;}
-    .mobile-menu {position: fixed; top: 0; right: -100%; width: 75%; height: 100%; background: var(--purple); padding: 60px 30px; transition: 0.3s; z-index: 2000;}
-    .mobile-menu a {display: block; color: white; font-size: 20px; margin-bottom: 25px; text-decoration: none;}
-    .close-btn {font-size: 30px; color: white; margin-bottom: 40px; cursor: pointer;}
-    .mobile-menu.active {right: 0;}
+    header { background: #fff; position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+    .nav { max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-size: 22px; font-weight: bold; color: var(--purple); background: white; padding: 8px 15px; border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.15); }
+    .nav-links { display: flex; gap: 25px; }
+    .nav-links a { text-decoration: none; color: var(--dark); font-weight: 600; }
+    .hamburger { display: none; font-size: 28px; cursor: pointer; }
+    .mobile-menu { position: fixed; top: 0; right: -100%; width: 75%; height: 100%; background: var(--purple); padding: 60px 30px; transition: 0.3s; z-index: 2000; }
+    .mobile-menu a { display: block; color: white; font-size: 20px; margin-bottom: 25px; text-decoration: none; }
+    .close-btn { font-size: 30px; color: white; margin-bottom: 40px; cursor: pointer; }
+    .mobile-menu.active { right: 0; }
 
-    /* HERO */
-    .hero {background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1590650213165-c1fef80648c4"); background-size: cover; background-position: center; color: white; padding: 130px 20px; text-align: center;}
-    .hero h1 {font-size: 48px; max-width: 900px; margin: auto;}
-    .hero p {max-width: 800px; margin: 20px auto 40px; font-size: 18px;}
+    .hero { background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url("https://images.unsplash.com/photo-1590650213165-c1fef80648c4"); background-size: cover; background-position: center; color: white; padding: 130px 20px; text-align: center; }
+    .hero h1 { font-size: 48px; max-width: 900px; margin: auto; }
+    .hero p { max-width: 800px; margin: 20px auto 40px; font-size: 18px; }
 
-    /* PROJECTS GRID */
-    .projects {max-width: 1200px; margin: 80px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; padding: 0 20px;}
-    .project-card {background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; text-align: center;}
-    .project-card:hover {transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.2);}
-    .project-card img {width: 100%; height: 200px; object-fit: cover;}
-    .project-card h3 {color: var(--purple); font-size: 22px; margin: 15px 0;}
-    .project-card a {display: inline-block; margin-bottom: 20px; padding: 10px 25px; background: var(--purple); color: white; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s;}
-    .project-card a:hover {background: var(--purple-dark);}
+    .projects { max-width: 1200px; margin: 80px auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 40px; padding: 0 20px; }
+    .project-card { background: white; border-radius: 16px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.15); transition: transform 0.3s, box-shadow 0.3s; text-align: center; }
+    .project-card:hover { transform: translateY(-8px); box-shadow: 0 25px 50px rgba(0,0,0,0.2); }
+    .project-card img { width: 100%; height: 200px; object-fit: cover; }
+    .project-card h3 { color: var(--purple); font-size: 22px; margin: 15px 0; }
+    .project-card a { display: inline-block; margin-bottom: 20px; padding: 10px 25px; background: var(--purple); color: white; border-radius: 8px; text-decoration: none; font-weight: bold; transition: background 0.3s; }
+    .project-card a:hover { background: var(--purple-dark); }
 
-    /* FOOTER */
-    footer {background: #111; color: #ccc; padding: 60px 20px; margin-top: 80px;}
-    .footer-content {max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px;}
-    .social-icons {display: flex; gap: 15px; margin-top: 10px;}
-    .social-icons a {width: 42px; height: 42px; background: #222; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s;}
-    .social-icons a:hover {background: var(--purple);}
-    .social-icons svg {width: 20px; height: 20px; fill: white;}
-    footer strong {color: white;}
+    footer { background: #111; color: #ccc; padding: 60px 20px; margin-top: 80px; }
+    .footer-content { max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; }
+    .social-icons { display: flex; gap: 15px; margin-top: 10px; }
+    .social-icons a { width: 42px; height: 42px; background: #222; display: flex; align-items: center; justify-content: center; border-radius: 50%; transition: 0.3s; }
+    .social-icons a:hover { background: var(--purple); }
+    .social-icons svg { width: 20px; height: 20px; fill: white; }
+    footer strong { color: white; }
+    footer a { color: #ccc; text-decoration: none; display: block; margin-bottom: 10px; }
 
-    @media (max-width: 900px) {.nav-links {display: none;} .hamburger {display: block;}}
+    @media (max-width: 900px) { .nav-links { display: none; } .hamburger { display: block; } }
   </style>
 </head>
 <body>
 
 <header>
   <div class="nav">
-    <div class="logo">Alphastack Digital Solutions</div>
+    <div class="logo">AlphaStack Digital Solutions</div>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -92,7 +93,7 @@
   <div class="project-card">
     <img src="femicoiture.jpg" alt="Femi Couture">
     <h3>Femi Couture</h3>
-    <a href="https://Femi Couture.vercel.app" target="_blank">Visit Project</a>
+    <a href="https://femicouture.vercel.app" target="_blank">Visit Project</a>
   </div>
   <div class="project-card">
     <img src="ovampa.jpg" alt="Ovampa">
@@ -109,10 +110,9 @@
 <footer>
   <div class="footer-content">
     <div>
-      <strong>Alphastack Digital Solutions</strong>
+      <strong>AlphaStack Digital Solutions</strong>
       <p>Resilient software for long-term success.</p>
     </div>
-
     <div>
       <strong>Quick Links</strong>
       <a href="index.html">Home</a>
@@ -121,7 +121,6 @@
       <a href="process.html">Process</a>
       <a href="contact.html">Contact</a>
     </div>
-
     <div>
       <strong>Connect</strong>
       <div class="social-icons">
@@ -140,8 +139,8 @@
 </footer>
 
 <script>
-  function openMenu(){document.getElementById("mobileMenu").classList.add("active");}
-  function closeMenu(){document.getElementById("mobileMenu").classList.remove("active");}
+  function openMenu(){ document.getElementById("mobileMenu").classList.add("active"); }
+  function closeMenu(){ document.getElementById("mobileMenu").classList.remove("active"); }
 </script>
 
 </body>

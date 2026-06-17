@@ -3,11 +3,42 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Alphastack Digital Solutions | Software Development Company for Startups</title>
-  <meta name="description" content="Alphastack Digital Solutions is a modern software development company building scalable web and mobile applications for startups and growing businesses worldwide.">
+  <title>AlphaStack Digital Solutions | Software Development Company for Startups</title>
+  <meta name="description" content="AlphaStack Digital Solutions is a modern software development company building scalable web and mobile applications for startups and growing businesses worldwide.">
+
+  <!-- Canonical -->
   <link rel="canonical" href="https://alphastack.vercel.app/" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="AlphaStack Digital Solutions | Software Development Company for Startups" />
+  <meta property="og:description" content="AlphaStack Digital Solutions builds scalable web and mobile applications for startups and growing businesses worldwide." />
   <meta property="og:url" content="https://alphastack.vercel.app/" />
-  <meta property="og:site_name" content="Alphastack Digital Solutions" />
+  <meta property="og:site_name" content="AlphaStack Digital Solutions" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="AlphaStack Digital Solutions" />
+  <meta name="twitter:description" content="Scalable web and mobile apps for startups and growing businesses." />
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AlphaStack Digital Solutions",
+    "url": "https://alphastack.vercel.app",
+    "logo": "https://alphastack.vercel.app/logo.png",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+234-904-700-9387",
+      "contactType": "customer support"
+    },
+    "sameAs": [
+      "https://www.facebook.com/profile.php?id=61588407906847"
+    ]
+  }
+  </script>
 
   <style>
     :root {
@@ -339,6 +370,13 @@
       color: white;
     }
 
+    footer a {
+      color: #ccc;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+
     @media (max-width: 900px) {
       .section {
         grid-template-columns: 1fr;
@@ -367,8 +405,8 @@
 <header>
   <div class="nav">
     <div class="logo">
-      <img src="logo.png" alt="Alphastack Digital Solutions Logo">
-      Alphastack Digital Solutions
+      <img src="logo.png" alt="AlphaStack Digital Solutions Logo">
+      AlphaStack Digital Solutions
     </div>
     <div class="nav-links">
       <a href="index.html">Home</a>
@@ -391,7 +429,7 @@
 </div>
 
 <section class="hero">
-  <h1>Building Resilient Software for African & Global Businesses</h1>
+  <h1>Building Resilient Software for African &amp; Global Businesses</h1>
   <p>We design and build scalable digital products that grow with your business.</p>
   <div class="hero-buttons">
     <a href="contact.html">Start a Project</a>
@@ -404,11 +442,11 @@
     <h2>Purpose-Driven Engineering</h2>
     <p>We focus on clean architecture, scalability, and long-term reliability to ensure your software remains valuable for years.</p>
   </div>
-  <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e">
+  <img src="https://images.unsplash.com/photo-1581090700227-1e37b190418e" alt="Software engineering team at work">
 </section>
 
 <section class="section">
-  <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c">
+  <img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Team collaborating on growth strategy">
   <div>
     <h2>Built for Growth</h2>
     <p>Our systems evolve with your business, adapting to scale, performance, and security demands.</p>
@@ -418,8 +456,8 @@
 <section class="faq">
   <h2>Frequently Asked Questions</h2>
   <div class="faq-item">
-    <h3>What services does Alphastack Digital Solutions offer?</h3>
-    <p>We provide web & mobile development, system architecture, UI/UX design, and consulting for startups.</p>
+    <h3>What services does AlphaStack Digital Solutions offer?</h3>
+    <p>We provide web &amp; mobile development, system architecture, UI/UX design, and consulting for startups.</p>
   </div>
   <div class="faq-item">
     <h3>How long does it take to build a project?</h3>
@@ -461,7 +499,7 @@
 </section>
 
 <section class="cta">
-  <h2>Let’s Build Something Meaningful</h2>
+  <h2>Let's Build Something Meaningful</h2>
   <a href="contact.html">Contact Us</a>
   <a href="projects.html">Our Projects</a>
 </section>
@@ -469,7 +507,7 @@
 <footer>
   <div class="footer-content">
     <div>
-      <strong>Alphastack Digital Solutions</strong>
+      <strong>AlphaStack Digital Solutions</strong>
       <p>Resilient software for long-term success. Specializing in scalable, secure, and high-performing digital solutions across Africa and globally.</p>
       <p>Contact: <a href="mailto:sumudinnovation4@gmail.com" style="color:white;">sumudinnovation4@gmail.com</a></p>
     </div>
@@ -497,17 +535,15 @@
     </div>
   </div>
 </footer>
+
 <script>
-  // Hamburger menu
   function openMenu() {
     document.getElementById("mobileMenu").classList.add("active");
   }
-
   function closeMenu() {
     document.getElementById("mobileMenu").classList.remove("active");
   }
 
-  // FAQ toggle
   const faqItems = document.querySelectorAll('.faq-item');
   faqItems.forEach(item => {
     item.addEventListener('click', () => {
@@ -515,7 +551,6 @@
     });
   });
 
-  // Testimonial carousel
   const carousel = document.getElementById('testimonialCarousel');
   let index = 0;
   const totalCards = carousel.children.length;
@@ -523,42 +558,11 @@
   function showNextTestimonial() {
     index++;
     if (index >= totalCards) index = 0;
-    const offset = -index * carousel.children[0].offsetWidth - 30 * index; // includes gap
+    const offset = -index * carousel.children[0].offsetWidth - 30 * index;
     carousel.style.transform = `translateX(${offset}px)`;
   }
 
-  // Autoplay every 3 seconds
   setInterval(showNextTestimonial, 3000);
-
-  // Optional: make carousel draggable/swipeable
-  let isDown = false;
-  let startX;
-  let scrollLeft;
-
-  carousel.addEventListener('mousedown', (e) => {
-    isDown = true;
-    startX = e.pageX - carousel.offsetLeft;
-    scrollLeft = carousel.offsetLeft;
-    carousel.style.cursor = 'grabbing';
-  });
-
-  carousel.addEventListener('mouseleave', () => {
-    isDown = false;
-    carousel.style.cursor = 'grab';
-  });
-
-  carousel.addEventListener('mouseup', () => {
-    isDown = false;
-    carousel.style.cursor = 'grab';
-  });
-
-  carousel.addEventListener('mousemove', (e) => {
-    if (!isDown) return;
-    e.preventDefault();
-    const x = e.pageX - carousel.offsetLeft;
-    const walk = (x - startX) * 1; // scroll-fast
-    carousel.style.transform = `translateX(${scrollLeft + walk}px)`;
-  });
 </script>
 </body>
 </html>

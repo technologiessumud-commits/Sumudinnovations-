@@ -3,11 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Our Software Development Process | Alphastack Digital Solutions</title>
-  <meta name="description" content="Discover Alphastack Digital Solutions’ step-by-step software development process—from idea validation and design to development, launch, and scaling.">
+  <title>Our Software Development Process | AlphaStack Digital Solutions</title>
+  <meta name="description" content="Discover AlphaStack Digital Solutions' step-by-step software development process—from idea validation and design to development, launch, and scaling.">
+
   <link rel="canonical" href="https://alphastack.vercel.app/process.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Our Software Development Process | AlphaStack Digital Solutions" />
+  <meta property="og:description" content="A structured, transparent approach that ensures quality, scalability, and long-term success." />
   <meta property="og:url" content="https://alphastack.vercel.app/process.html" />
-  <meta property="og:site_name" content="Alphastack Digital Solutions" />
+  <meta property="og:site_name" content="AlphaStack Digital Solutions" />
 
   <style>
     :root {
@@ -18,263 +22,52 @@
       --text: #222;
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-      font-family: Arial, Helvetica, sans-serif;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, Helvetica, sans-serif; }
+    body { background: var(--gray); color: var(--text); line-height: 1.7; }
 
-    body {
-      background: var(--gray);
-      color: var(--text);
-      line-height: 1.7;
-    }
+    header { background: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 12px rgba(0,0,0,0.06); }
+    .nav { max-width: 1200px; margin: auto; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-weight: bold; font-size: 20px; color: var(--purple); }
+    .nav-links { display: flex; gap: 25px; }
+    .nav-links a { text-decoration: none; color: var(--text); font-weight: 600; }
+    .hamburger { display: none; font-size: 28px; cursor: pointer; }
+    .mobile-menu { position: fixed; top: 0; right: -100%; width: 75%; height: 100%; background: var(--purple); padding: 60px 30px; transition: 0.3s; z-index: 2000; }
+    .mobile-menu a { display: block; color: white; font-size: 20px; text-decoration: none; margin-bottom: 25px; }
+    .close-btn { font-size: 30px; color: white; margin-bottom: 40px; cursor: pointer; }
+    .mobile-menu.active { right: 0; }
 
-    /* NAV */
-    header {
-      background: var(--white);
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
-    }
+    .hero { background: linear-gradient(135deg, var(--purple), #7c4dff); color: white; padding: 110px 20px; text-align: center; }
+    .hero h1 { font-size: 44px; margin-bottom: 15px; }
+    .hero p { max-width: 850px; margin: auto; font-size: 18px; opacity: 0.95; }
 
-    .nav {
-      max-width: 1200px;
-      margin: auto;
-      padding: 15px 20px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
+    .timeline { max-width: 1100px; margin: auto; padding: 100px 20px; position: relative; }
+    .timeline::before { content: ''; position: absolute; left: 50%; top: 0; width: 4px; height: 100%; background: var(--purple); transform: translateX(-50%); }
+    .step { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; margin-bottom: 100px; align-items: center; }
+    .step:nth-child(even) { direction: rtl; }
+    .step:nth-child(even) > * { direction: ltr; }
+    .step-content { background: white; padding: 40px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); }
+    .step-content h2 { color: var(--purple); margin-bottom: 10px; }
+    .step-content span { display: inline-block; margin-bottom: 10px; font-weight: bold; color: #777; }
+    .step img { width: 100%; border-radius: 16px; box-shadow: 0 25px 50px rgba(0,0,0,0.15); }
 
-    .logo {
-      font-weight: bold;
-      font-size: 20px;
-      color: var(--purple);
-    }
+    .cta { background: var(--purple); color: white; padding: 90px 20px; text-align: center; }
+    .cta h2 { font-size: 36px; margin-bottom: 15px; }
+    .cta a { display: inline-block; margin-top: 25px; padding: 15px 30px; background: white; color: var(--purple); font-weight: bold; border-radius: 8px; text-decoration: none; }
 
-    .nav-links {
-      display: flex;
-      gap: 25px;
-    }
-
-    .nav-links a {
-      text-decoration: none;
-      color: var(--text);
-      font-weight: 600;
-    }
-
-    .hamburger {
-      display: none;
-      font-size: 28px;
-      cursor: pointer;
-    }
-
-    .mobile-menu {
-      position: fixed;
-      top: 0;
-      right: -100%;
-      width: 75%;
-      height: 100%;
-      background: var(--purple);
-      padding: 60px 30px;
-      transition: 0.3s;
-      z-index: 2000;
-    }
-
-    .mobile-menu a {
-      display: block;
-      color: white;
-      font-size: 20px;
-      text-decoration: none;
-      margin-bottom: 25px;
-    }
-
-    .close-btn {
-      font-size: 30px;
-      color: white;
-      margin-bottom: 40px;
-      cursor: pointer;
-    }
-
-    .mobile-menu.active {
-      right: 0;
-    }
-
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, var(--purple), #7c4dff);
-      color: white;
-      padding: 110px 20px;
-      text-align: center;
-    }
-
-    .hero h1 {
-      font-size: 44px;
-      margin-bottom: 15px;
-    }
-
-    .hero p {
-      max-width: 850px;
-      margin: auto;
-      font-size: 18px;
-      opacity: 0.95;
-    }
-
-    /* TIMELINE */
-    .timeline {
-      max-width: 1100px;
-      margin: auto;
-      padding: 100px 20px;
-      position: relative;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 50%;
-      top: 0;
-      width: 4px;
-      height: 100%;
-      background: var(--purple);
-      transform: translateX(-50%);
-    }
-
-    .step {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
-      margin-bottom: 100px;
-      align-items: center;
-    }
-
-    .step:nth-child(even) {
-      direction: rtl;
-    }
-
-    .step:nth-child(even) > * {
-      direction: ltr;
-    }
-
-    .step-content {
-      background: white;
-      padding: 40px;
-      border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-    }
-
-    .step-content h2 {
-      color: var(--purple);
-      margin-bottom: 10px;
-    }
-
-    .step-content span {
-      display: inline-block;
-      margin-bottom: 10px;
-      font-weight: bold;
-      color: #777;
-    }
-
-    .step img {
-      width: 100%;
-      border-radius: 16px;
-      box-shadow: 0 25px 50px rgba(0,0,0,0.15);
-    }
-
-    /* CTA */
-    .cta {
-      background: var(--purple);
-      color: white;
-      padding: 90px 20px;
-      text-align: center;
-    }
-
-    .cta h2 {
-      font-size: 36px;
-      margin-bottom: 15px;
-    }
-
-    .cta a {
-      display: inline-block;
-      margin-top: 25px;
-      padding: 15px 30px;
-      background: white;
-      color: var(--purple);
-      font-weight: bold;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-
-    footer {
-      background: #111;
-      color: #ccc;
-      padding: 50px 20px;
-    }
-
-    .footer-content {
-      max-width: 1200px;
-      margin: auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 30px;
-    }
-
-    footer a {
-      color: #ccc;
-      text-decoration: none;
-      display: block;
-      margin-bottom: 8px;
-    }
-
-    footer strong {
-      color: white;
-    }
-
-    .social-icons {
-      display: flex;
-      gap: 15px;
-      margin-top: 10px;
-    }
-
-    .social-icons a {
-      width: 42px;
-      height: 42px;
-      background: #222;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border-radius: 50%;
-    }
-
-    .social-icons svg {
-      width: 20px;
-      height: 20px;
-      fill: white;
-    }
+    footer { background: #111; color: #ccc; padding: 50px 20px; }
+    .footer-content { max-width: 1200px; margin: auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+    footer a { color: #ccc; text-decoration: none; display: block; margin-bottom: 8px; }
+    footer strong { color: white; }
+    .social-icons { display: flex; gap: 15px; margin-top: 10px; }
+    .social-icons a { width: 42px; height: 42px; background: #222; display: flex; align-items: center; justify-content: center; border-radius: 50%; }
+    .social-icons svg { width: 20px; height: 20px; fill: white; }
 
     @media (max-width: 900px) {
-      .timeline::before {
-        left: 20px;
-      }
-
-      .step {
-        grid-template-columns: 1fr;
-        padding-left: 40px;
-      }
-
-      .step:nth-child(even) {
-        direction: ltr;
-      }
-
-      .nav-links {
-        display: none;
-      }
-
-      .hamburger {
-        display: block;
-      }
+      .timeline::before { left: 20px; }
+      .step { grid-template-columns: 1fr; padding-left: 40px; }
+      .step:nth-child(even) { direction: ltr; }
+      .nav-links { display: none; }
+      .hamburger { display: block; }
     }
   </style>
 </head>
@@ -282,7 +75,7 @@
 
 <header>
   <div class="nav">
-    <div class="logo">Alphastack Digital Solutions</div>
+    <div class="logo">AlphaStack Digital Solutions</div>
     <div class="nav-links">
       <a href="index.html">Home</a>
       <a href="about.html">About</a>
@@ -313,19 +106,19 @@
   <div class="step">
     <div class="step-content">
       <span>Step 1</span>
-      <h2>Discovery & Strategy</h2>
+      <h2>Discovery &amp; Strategy</h2>
       <p>We deeply understand your business goals, users, and technical requirements to create a solid roadmap.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="">
+    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978" alt="Discovery and strategy session">
   </div>
 
   <div class="step">
     <div class="step-content">
       <span>Step 2</span>
-      <h2>Design & Planning</h2>
+      <h2>Design &amp; Planning</h2>
       <p>Wireframes, UI/UX design, and system architecture planning ensure a smooth and efficient build phase.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="">
+    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f" alt="Design and planning phase">
   </div>
 
   <div class="step">
@@ -334,48 +127,48 @@
       <h2>Development</h2>
       <p>Clean, scalable, and secure code is written using modern technologies and best practices.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="">
+    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c" alt="Software development">
   </div>
 
   <div class="step">
     <div class="step-content">
       <span>Step 4</span>
-      <h2>Testing & Quality Assurance</h2>
+      <h2>Testing &amp; Quality Assurance</h2>
       <p>Rigorous testing ensures reliability, performance, and security before launch.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="">
+    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c" alt="Testing and quality assurance">
   </div>
 
   <div class="step">
     <div class="step-content">
       <span>Step 5</span>
-      <h2>Launch & Deployment</h2>
+      <h2>Launch &amp; Deployment</h2>
       <p>We deploy, monitor, and ensure a smooth product launch with minimal downtime.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="">
+    <img src="https://images.unsplash.com/photo-1581092795360-fd1ca04f0952" alt="Launch and deployment">
   </div>
 
   <div class="step">
     <div class="step-content">
       <span>Step 6</span>
-      <h2>Maintenance & Scaling</h2>
+      <h2>Maintenance &amp; Scaling</h2>
       <p>Continuous improvements, monitoring, and scaling as your business grows.</p>
     </div>
-    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="">
+    <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d" alt="Maintenance and scaling">
   </div>
 
 </section>
 
 <section class="cta">
   <h2>Ready to Build With Confidence?</h2>
-  <p>Let’s turn your idea into a resilient product.</p>
+  <p>Let's turn your idea into a resilient product.</p>
   <a href="contact.html">Start a Project</a>
 </section>
 
 <footer>
   <div class="footer-content">
     <div>
-      <strong>Alphastack Digital Solutions</strong>
+      <strong>AlphaStack Digital Solutions</strong>
       <p>Building resilient software for long-term success.</p>
     </div>
     <div>
@@ -404,14 +197,9 @@
 </footer>
 
 <script>
-  function openMenu(){
-    document.getElementById("mobileMenu").classList.add("active");
-  }
-
-  function closeMenu(){
-    document.getElementById("mobileMenu").classList.remove("active");
-  }
+  function openMenu(){ document.getElementById("mobileMenu").classList.add("active"); }
+  function closeMenu(){ document.getElementById("mobileMenu").classList.remove("active"); }
 </script>
 
 </body>
-      </html>
+</html>
